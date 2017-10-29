@@ -1,0 +1,114 @@
+		.input[type=text] {
+		    width: 65%;
+		    height: 50px;
+		    margin:20px 20px 0px 25px;
+		    box-sizing: border-box;
+		    border: 0px solid #ccc;
+		    border-radius: 3px;
+		    font-size: 16px;
+		    font-weight:bold; 
+		    background-color: #EFEFEF;
+		    background-image: url("busqd.png");
+		    background-repeat: no-repeat;
+
+
+		    background-position:left; 
+		    background-repeat: no-repeat;
+		    padding: 12px 10px 12px 35px;
+		    -webkit-transition: width 0.4s ease-in-out;
+		    transition: width 0.4s ease-in-out;
+		}
+		.input[type=text]:focus {
+		    width: 65%;
+		}
+
+.margenes{
+
+	margin:0px 20px 0px 30px;
+}
+
+.margen{
+	margin:0px 30px 0px 0px; 
+}
+
+.btn-default{
+	 background-color: #fff;
+ 	 border-color: #fff ;
+}
+.btn-default:hover{
+	 background-color: #b5b5b5 ;
+ 	 border-color: #b5b5b5;
+}
+
+
+body{
+	background: #fff;
+}
+
+.contenedor{
+	width: 90%;
+	margin: 15px auto;
+}
+
+.elemento{
+	width: 260px;
+	background: #fff;
+	float:left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	box-shadow:  0  1px 2px 0 rgba(0,0,0,0.22);
+
+}
+
+.cambiacolor:hover{
+	font-color:red;
+
+}
+
+.tamaño{
+	font-size:14px;
+}
+
+.glyphicon {
+    font-size: 30px;
+}
+
+.nombre-usuario{
+	letter-spacing: -1.25px;
+    line-height: 42px;
+    word-spacing: -2.25px;
+    font-size: 50px; 
+    font-family: Helvetica;
+     font-weight: bolder
+}
+
+.redondo{
+margin: 0;
+padding: 0;
+border-radius: 600px;
+overflow: hidden;
+margin: -40px 550px;
+
+}
+
+.boton-personalizado{
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 15px;
+    margin: 55px 0px 0px 0px;
+    background-color: #EFEFEF;
+    border-color: transparent;
+
+  }
+
+ .cuadrado{
+     width: 300px; 
+     height: 200px;  
+     background: #EFEFEF;
+     margin: -20px 40px;
+     border-radius: 10px;
+
+}

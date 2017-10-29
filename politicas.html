@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Condiciones del servicio| Pinterest for Policy</title>
+		<meta charset="utf-8">
+		<link rel="icon" href="favico/logo.png" sizes="50x50" type="image/png">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/custom.css">
+	</head>
+	
+	<body>
+
+       <div style="margin: 0px; padding: 0px;">
+       	  <div style="font-size:16px ; position: relative; top: 10px; left: 95px; margin: 0px">
+       	  	<a href="#" style="color: #bd081c;"><img src="img/logo_2.png" width="28px" height="28px"> Política</a>
+       	  </div>
+          <div style="position: relative; top: -12px; left:85%; font-size: 1.2em;margin: 0px;">
+          	<a href="login.html"><span id="links">Registrarse</span></a>
+          </div> 
+          <hr style="position: relative;top:-20px;">
+       </div>
+       
+       <div style=" width: auto; height: auto; position: relative; left: 100px;">
+          <table> 
+          <tr>
+           <button id="btn-azul" class="img-circle btn-circle" onmouseover="botonAzul();" onmouseout=" botonGris('#btn-azul');" onclick="clickBotonAzul();" > 
+                   Condiciones</button>    
+           <button id="btn-amarillo" class="img-circle btn-circle" onmouseover="botonAmarillo();" onmouseout=" botonGris('#btn-amarillo');" onclick="clickBotonAmarillo();">privacidad</button>
+           <button id="btn-rojo" class="img-circle btn-circle" onmouseover="botonRojo();" onmouseout=" botonGris('#btn-rojo');" onclick="clickBotonRojo();";>Comunidad</button>
+           <button id="btn-azul-claro" class="img-circle btn-circle" onmouseover="botonAzulClaro();" onmouseout=" botonGris('#btn-azul-claro');" onclick="clickBotonAzulClaro();">Pines</button>
+           <button id="btn-azul-oscuro" class="img-circle btn-circle" onmouseover="botonAzulOscuro();" onmouseout=" botonGris('#btn-azul-oscuro');" onclick="clickBotonAzulOscuro();">Publicidad</button>
+           <button id="btn-verde" class="img-circle btn-circle" onmouseover="botonVerde();" onmouseout=" botonGris('#btn-verde');" onclick="clickBotonVerde();">Desarrolladores</button>
+           <button id="btn-purpura" class="img-circle btn-circle" onmouseover="botonPurpura();" onmouseout=" botonGris('#btn-purpura');" onclick="clickBotonPurpura();">Copyright</button>
+           <button id="btn-negro" class="img-circle btn-circle" onmouseover="botonNegro();" onmouseout=" botonGris('#btn-negro');" onclick="clickBotonNegro();">Marca Com</button>
+          </tr> 
+          </table>
+       </div>
+       
+       <div id="div-condiciones" style="visibility: hidden;" class="informacion" "> 
+          <span style="color: #004a90;">Condiciones del Servicio</span>
+       </div>
+
+       <div id="div-privacidad" style="visibility: hidden;" class="informacion"  > 
+        <span style="color: #ffc908;">Política de privacidad</span>
+       </div>
+        <div id="div-comunidad" style="visibility: hidden;" class="informacion" "> 
+          <span style="color: #ff8080;">Directrices para la comunidad</span>
+       </div>
+
+       <div id="div-pines" style="visibility: hidden;" class="informacion" > 
+        <span style="color: #0084ff;">Buyable Pins guidelines</span>
+       </div>
+
+       <div id="div-publicidad" style="visibility: hidden;" class="informacion" "> 
+          <span style="color: #425e63;">Advertising guidelines</span>
+       </div>
+             
+       <div id="div-desarrolladores" style="visibility: hidden;" class="informacion" > 
+        <span style="color: #88a5aa;">Developer guidelines</span>
+       </div>
+
+       <div id="div-copyright" style="visibility: hidden;" class="informacion" "> 
+          <span style="color: #b46aec;">Copyright</span>
+       </div>
+             
+       <div id="div-marca" style="visibility: hidden;" class="informacion" > 
+        <span style="color:#555555;">Trademark</span>
+       </div>
+
+       <script type="text/javascript" src="js/funciones.js"></script>
+       <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	</body>
+</html>

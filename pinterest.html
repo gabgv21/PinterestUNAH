@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/masonry.js"></script>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<link href="css/pinterest.css" rel="stylesheet">
+		<title>Pinterest</title>
+	<link rel="icon" href="img/favicon-pinterest.png">
+
+    <link rel="icon" href="img/logo.png" sizes="16x16" type="image/jpg">	
+</head>
+
+<body>
+<!--<img src="pinterest.gif" width="30" height="30" class="margenes" >-->
+<div>
+	
+	   <a href="pinterest.html"><button type="button" class=" btn btn-default cambiacolor"  style="margin-left: 20px;">
+	   	 <img src="img/logo.png" height="34" width="34"><br><p class="tamaño">Inicio</p>
+	   </button></a>
+	
+	
+	<input type="text" name="search" id=search placeholder="Buscar" style="font-weight: bold;" class="input" >
+	
+	
+	<button type="button" class="btn btn-default cambiacolor" >
+		<i style="color:#969696" class="fa fa-navicon fa-2x "><br><p style="font-family: helvetica;font-weight: bold;" class="tamaño">Categorias</p></i>
+	</button>
+	
+	
+	<a href="perfilPinterest.html"><button type="button" class="btn btn-default cambiacolor" >
+		<i style="color:#969696" class="fa fa-user fa-2x "><br><p style="font-family: helvetica;font-weight: bold;" class="tamaño">Guardado</p></i>
+	</button></a>
+	
+	
+	<button type="button" class="btn btn-default cambiacolor" >
+		<i style="color:#969696" class="fa fa-commenting fa-2x "><br><p style="font-family: helvetica;font-weight: bold;" class="tamaño">Notificaciones</p></i>
+	</button>
+
+	<hr style="margin-top: -2px">
+</div>
+	<!--<i class="fa fa-camera-retro"></i> fa-camera-retro-->
+	<div  class="contenedor">
+		<div class="elemento">
+			<img src="img/404.jpg"  width="260" height="200" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/bar.jpg"  width="260" height="320" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/boots.jpg" width="260" height="520" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/carro.jpg" width="260" height="400" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/com.jpg"  width="260" height="620" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/exam.jpg" width="260" height="300" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/finn.jpg" width="260" height="230" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/gato.jpg" width="260" height="300" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/goku.jpg" width="260" height="500" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/html.jpg" width="260" height="650" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/husky.jpg" width="260" height="300" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/ibra.jpg" width="260" height="420" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/trunks.jpg" width="260" height="450" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/messi.jpg" width="260" height="340" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/iniesta.jpg" width="260" height="410" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/pika.jpg" width="260" height="180" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/mono.jpg" width="260" height="140" class="img-rounded">
+		</div>
+		<div class="elemento">
+			<img src="img/regg.jpg" width="260" height="260" class="img-rounded">
+		</div>
+	</div>
+
+	<script>
+			var container = document.querySelector('.contenedor');
+			var msnry = new Masonry( container, {
+			  // options
+			  itemSelector: '.elemento'
+			});
+	</script>
+</body>
+</html>

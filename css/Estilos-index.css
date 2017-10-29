@@ -1,0 +1,308 @@
+html{
+	background-color: #efefef;
+}
+
+html, body{
+	font-family: Helvetica, arial, sans-serif;
+}
+
+body{
+	position: relative;
+	overflow-y: scroll;
+	margin: 0;  
+}
+
+a{
+	color: #717171;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:focus, a:hover{
+	color: #8a8a8a;
+}
+
+ul li{
+	list-style: none;
+	padding: 0;
+}
+
+:focus{
+	outline: #d1d1d1 auto 1px;
+}
+
+button, input, select, textarea{
+	font-family: Helvetica, arial, sans-serif;
+}
+
+.skipToContent{
+	display: none;
+}
+
+.visuallyHidden{
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px; 
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+img{
+	max-width: 100%;
+	width: auto;
+	height: auto;
+
+	vertical-align: middle;
+	border: 0;
+}
+
+fieldset{
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+button, input, select, textarea{
+	font-size: 100%;
+	margin: 0;
+	vertical-align: middle;
+}
+
+button, input{
+	overflow: visible;
+	line-height: normal;
+}
+
+button, input[type='button'], input[type='reset'], input[type='submit']{
+	cursor: pointer;
+	-webkit-appearance: button;
+}
+
+input[type='search']{
+	box-sizing: content-box;
+	-webkit-appearance: textfield;
+}
+
+textarea{
+	overflow: auto;
+	vertical-align: top;
+}
+
+.red.active: focus, .red.active: hover{
+	background-color: #d50c22 !important; 
+} 
+
+.lightGrey.active: focus, .lightGrey.active: hover{
+	background-color: #f5f3f3 !important
+}
+
+.darkGrey.active: focus, darkGrey.active: hover{
+	background-color: #5e5e5e !important
+}
+
+#logo{
+	height: 50;
+	display: block;
+	width: 50;
+}
+
+#txt-contrasenna{
+	background-color: #f0f0f0;
+	border: 0px;
+	box-shadow: none;
+	position: relative;
+	-webkit-font-smoothing: antialiased;
+	border-radius: 3px;
+	font-weight: bold;
+	padding: 10px;
+	box-sizing: border-box;
+	width: 100%;
+	color: #333;
+	font-size: 14px;
+	outline: none;
+	transition: opacity 0.5s linear;
+	display: flex;
+	opacity: 1;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+#txt-correo{
+	background-color: #f0f0f0; 
+	border: 0px; 
+	-webkit-box-shadow:none; 
+	box-shadow: none; 
+	position: relative; 
+	-webkit-font-smoothing: antialiased; 
+	border-radius: 3px; 
+	font-weight: bold; 
+	padding: 10px; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box; 
+	width: 100%; 
+	color: #333; 
+	font-size: 14px; 
+	outline: none;
+}
+
+#btn-continuar{
+	border: 0px; 
+	height: 36px; 
+	display: inline-block; 
+	border-radius: 4px; 
+	-webkit-font-smoothing: antialiased; 
+	padding: 0 18px; 
+	font-size: 15px; 
+	font-weight: bold; 
+	outline: none; 
+	position: relative; 
+	box-shadow: none; 
+	cursor: pointer; 
+	margin-top: 10px; 
+	vertical-align: middle; 
+	text-align: center; 
+	background-color: #bd081c; 
+	color:#fff; 
+	width: 100%;
+}
+
+#btn-continuar: focus, #btn-continuar: hover{
+	background-color: #d50c22 !important;
+}
+
+#btn-fb{
+	border:0px;
+	height:40px;
+	display:block;
+	border-radius:2px;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	padding:0px 0px 0px 8px;
+	font-size:15px;
+	font-weight:normal;
+	outline:none;
+	position:absolute;
+	-webkit-box-shadow:none;
+	box-shadow:none;
+	cursor:pointer;
+	margin-top:10px;
+	vertical-align:middle;
+	text-align:left;
+	background-clip:padding-box;
+	background-color:#4267b2;
+	margin-bottom:9px;
+	transition:opacity .2s linear;
+	width:100%;
+}
+
+#btn-google{
+	border: 0px;
+	height: 40px;
+	display: block;
+	border-radius: 2px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	padding: 1px;
+	font-size: 15px;
+	font-weight: bold;
+	outline: none;
+	position: relative;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	cursor: pointer;
+	margin-top: 0px;
+	vertical-align: middle;
+	text-align: left;
+	margin-bottom: 9px;
+	margin-right: 0px;
+	background-clip: padding-box;
+	transition: opacity .2s linear;
+	width: 100%;
+	background-color: #4285f4;
+	transform: translateY(50px);
+}
+
+#spn-google{
+	color: #fff;
+	text-shadow: 0 -1px rgba(0,0,0,0.25);
+	display: inline-block;
+	font-family: helvetica, arial, sans-serif;
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	vertical-align: top;
+	width: 83%;
+}
+
+#spn-fb{
+	color:#fff;
+	display:inline-block;
+	font-family:Helvetica, Arial, sans-serif;
+	font-size:15px;
+	font-weight:bold;
+	letter-spacing:normal;
+	line-height:16px;
+	padding-left:4px;
+	padding-top:1px;
+	text-align:center;
+	vertical-align:text-bottom;
+	white-space:normal;
+	width:88%;
+	transform: translateY(-5px);
+}
+
+#spn-politicas{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 11px;
+	font-weight: normal;
+	text-align: center;
+	-webkit-transition: opacity .2s linear;
+	transition: opacity .2s linear;
+	color: #aaa;
+	width: 224px;
+}
+
+#btn-login{
+	border: 0px;
+	height: 36px;
+	display: inline-block;
+	border-radius: 4px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	padding: 0 43px; font-size: 15px;
+	font-weight: bold; outline: none;
+	position: absolute;
+	-webkit-box-shadow: none;
+	box-shadow: none; cursor: pointer;
+	margin-top: 10px;vertical-align: middle;
+	text-align: center;
+	background-color: #ebebeb;
+	color: #444;
+	right: 25px;
+	top: 15px;
+}
+
+.anclas-inferiores{
+	color: #fff;
+	font-size: 11px;
+	font-weight: normal;
+	max-width: 135px;
+	padding: 4px 7px;
+}
+
+#div-fondo{
+	height: 100%;
+	width: 100%;
+	background-color: #000;
+	background-image: url(../img/fondo-login.jpg);
+	background-position: 0px -700px;
+	background-size: cover;
+	padding-bottom: 300px;
+	position: fixed;
+}
