@@ -9,6 +9,71 @@
 		<TITLE>Pinterest</TITLE>
 	</head>
 	<body style="background-color:  rgb(239, 239, 239);">
+		<div id="fb-root"></div>
+        <script>
+        window.fbAsyncInit = function() {
+                FB.init({
+                appId: '1354993577945011',
+                status: true,
+                cookie: true,
+                xfbml: true
+            });
+             
+        };
+
+        (function(d){
+        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement('script'); js.id = id; js.async = true;
+        js.src = "//connect.facebook.net/es_ES/all.js";
+        ref.parentNode.insertBefore(js, ref);
+        }(document));
+
+        function login() {
+            FB.login(function(response) {
+                validarUsuario();
+
+            }, {scope: 'public_profile'});            
+        }
+
+        /* function pasar_datos(pagina, campos){
+                            	pagina +="?";
+                            	vectorcamp = nombre.split(",");
+                            	for(i=0;i<vectorcamp.length;i++){
+                            		pagina+= vectorcamp[i]+"="+escape(eval(vectorcamp[i]))+"&";
+                            	}
+                            	pagina=pagina.substring(0,pagina.length-1);
+                            	locatio.href=pagina
+
+                            } */ 
+        function validarUsuario() {  
+                FB.getLoginStatus(function(response) {  
+                    if(response.status == 'connected') {  
+                        FB.api('/me', function(response) {  
+                            alert('Hola ' + response.name);
+                            //document.getElementById("div-btnFacebook").href="perfilPinterest.php?name="+response.name;
+
+                            	})
+                    }else if(response.status == 'not_authorized') {  
+                        alert('Debes autorizar la app!');  
+                   		} else {  
+                        	alert('Debes ingresar a tu cuenta de Facebook!');;  
+                   		}   
+                    })  
+                } 
+                 
+
+        function logout() {
+            FB.logout(function(response) {
+              // user is now logged out
+            });
+        }
+
+        var status = FB.getLoginStatus();
+
+        console.log(status);
+
+        </script>
 		<div>
 			<div style="margin-top:100px;">
 				<div data-test-login="true" style="background-color:#fff;border-radius:8px;position:relative;text-align:center;width:404px;margin:auto;min-height:520px;box-shadow:0 2px 10px rgba(0,0,0,0.45);">
@@ -41,7 +106,7 @@
 								<div>
 									<div style="position: relative;">
 										<div>
-											<button aria-label class="FacebookConnectButton active" style="border: 0px; height: 40px; display: block; border-radius: 2px; -webkit-font-smoothing: antialiased; padding: 0px 0px 0px 8px; font-size: 15px; font-weight: normal; outline: none; position: absolute; box-shadow: none; cursor: pointer; margin-top: 10px; vertical-align: middle; text-align: left; background-clip: padding-box; background-color: #4267b2; margin-bottom: 9px; transition: opacity .2s linear; width: 100%; transform: translateY(-10px);" type="button" data-reactid="9">
+											<button aria-label onclick="javascript:login();" class="FacebookConnectButton active" style="border: 0px; height: 40px; display: block; border-radius: 2px; -webkit-font-smoothing: antialiased; padding: 0px 0px 0px 8px; font-size: 15px; font-weight: normal; outline: none; position: absolute; box-shadow: none; cursor: pointer; margin-top: 10px; vertical-align: middle; text-align: left; background-clip: padding-box; background-color: #4267b2; margin-bottom: 9px; transition: opacity .2s linear; width: 100%; transform: translateY(-10px);" type="button" data-reactid="9">
 												<svg class="_hd_27" height="24" widht="24" viewBox="0 0 16 16" aria-label="Facebook" role="img" data-reactid="30" style="color: #fff">
 													<title>Faceebook</title>
 													<path d="M 11.084 15.997 v -6.17 h 2.07 l 0.316 -2.441 c -0.112 -0.011 -0.208 -0.029 -0.303 -0.03 c -0.618 -0.002 -1.236 -0.007 -1.853 0.003 c -0.194 0.003 -0.253 -0.06 -0.246 -0.252 c 0.022 -0.546 -0.002 -1.096 0.048 -1.64 c 0.044 -0.472 0.34 -0.72 0.823 -0.744 c 0.454 -0.024 0.91 -0.022 1.365 -0.016 c 0.191 0.003 0.257 -0.063 0.254 -0.253 c -0.01 -0.587 -0.003 -1.174 -0.004 -1.76 c 0 -0.107 0.013 -0.217 -0.152 -0.23 c -0.906 -0.076 -1.818 -0.195 -2.715 0.034 C 9.495 2.8 8.78 3.598 8.605 4.8 c -0.106 0.727 -0.068 1.475 -0.088 2.215 c -0.009 0.34 -0.002 0.34 -0.345 0.34 c -0.502 0 -1.003 0.007 -1.505 -0.002 c -0.19 -0.004 -0.255 0.062 -0.252 0.254 c 0.01 0.664 0.008 1.328 0 1.992 c -0.002 0.17 0.05 0.229 0.224 0.225 c 0.548 -0.01 1.097 0.002 1.645 -0.006 c 0.162 -0.003 0.235 0.03 0.235 0.213 c -0.005 1.922 -0.004 3.845 -0.002 5.767 c 0 0.145 -0.042 0.202 -0.198 0.202 c -2.486 -0.004 -4.972 0 -7.458 -0.006 c -0.477 0 -0.844 -0.38 -0.857 -0.857 c -0.008 -0.254 -0.002 -0.51 -0.002 -0.764 V 1.009 C 0.002 0.342 0.345 0 1.012 0 h 13.99 C 15.655 0 16 0.345 16 1 v 14.012 c 0 0.635 -0.351 0.986 -0.988 0.986 h -3.928 Z" fill="#fff"></path>
