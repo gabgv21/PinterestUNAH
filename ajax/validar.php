@@ -1,21 +1,22 @@
 <?php
-   if(!(empty($_GET['txt-correo'])&&empty($_GET['txt-contraseña'])))
+   if(!(empty($_POST['txt-correo'])&&empty($_POST['txt-password'])))
    {
 		$archivo = fopen("../data/usuarios.csv", "r");
 		while ($linea = fgets($archivo)) {
 			$partes = explode("|", $linea);
-				if(($_GET['txt-correo'] == $partes[0] && $_GET['txt-contraseña']))
+				if(($_POST['txt-correo']==$partes[0])&&($_POST['txt-password']==$partes[1]))
 				{
-					fclose($archivo);
-					header("location: ../pinterest.html");
-					exit();
+			     
+					    fclose($archivo);
+					    header("location: ../pinterest.html");
+					    exit();
 				}
 
 			}
-			header("location: ../login.html");
+			header("location: ../iniciarSesion.html");
 		}
 		else{
-			header("location: ../login.html");
+			header("location: ../iniciarSesion.html");
 		}
     	
 ?>
