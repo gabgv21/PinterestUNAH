@@ -152,3 +152,82 @@ function clickBotonNegro()
   $("#div-copyright").css("visibility","hidden");
   $("#div-marca").css("visibility","visible");
 }
+
+
+function guardarRegistro(){
+  if($("#txt-correo").val())
+   {
+      $("#txt-correo").css("background-color", "#eee");
+      if ($("#txt-password").val())
+      {
+        $("#txt-password").css("background-color", "#eee");
+        if($("#txt-nombreEmpresa").val()){
+             $("#txt-nombreEmpresa").css("background-color", "#eee");
+             if($("#slc-tipoEmpresa").val())
+             {
+                 $("#slc-tipoEmpresa").css("background-color", "#eee"); 
+
+                      if($("#txt-web").val())
+                        {
+
+                          $("#txt-web").css("background-color", "#eee");  
+                           window.location = 'pinterest.html';
+
+                        }
+
+                        else{
+
+                              $("#txt-web").css("background-color", "red");
+
+                            }
+             }
+
+            else{
+
+               $("#slc-tipoEmpresa").css("background-color", "red");
+
+            }
+
+        } 
+
+        else{
+
+            $("#txt-nombreEmpresa").css("background-color", "red");
+        }
+      }
+      else{
+
+         $("#txt-password").css("background-color", "red");
+      }
+   }
+   else{
+
+     $("#txt-correo").css("background-color", "red");
+   }
+}
+
+
+
+$(document).ready(function(){
+
+$.ajax({
+
+  url: "ajax/obtener-elementos-empresa.php",
+  data: "",
+  method: "POST",
+  success: function(respuesta){
+    $("#slc-tipoEmpresa").html(respuesta);
+   
+  },
+  error: function(e){
+
+  alert(e);
+
+  },
+
+
+});
+
+
+
+})
