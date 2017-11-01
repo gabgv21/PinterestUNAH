@@ -6,20 +6,20 @@
        <meta charset="utf-8">
        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
        <link rel="stylesheet" type="text/css" href="css/custom.css">
-
+       
     </head>
     
     <body style="background-image: url(img/fondo_empresa.png)">
      <div class="container">
          <div class="row">
-     	    <div class="col-sm-7">
+     	    <div class="col-sm-7 col-xs-12">
      	      <div id="div-formulario-1">
                  <div id="div-formulario-2">
                      
                  </div>
                
         
-                 <div id="div-titulo-formulario">
+                 <div id="div-titulo-formulario" class="col-lg-12 col-sm-12 col-md-12 col-xs-12">
                           <label id="div-logo"><img src="img/logo_2.png"></label>
                           <div id="div-titulo-formulario2">
                               <p id="titulo">Haz crecer tu negocio</p>
@@ -34,10 +34,10 @@
                             
                            <div style="position:relative; top:10px;">     
                                <form> 
-                                   <input type="text" class="form-control" placeholder="Correo Electrónico">
-                                   <input type="password"  class="form-control"placeholder="Contraseña">
+                                   <input type="email" id="txt-correo" class="form-control" placeholder="Correo Electrónico">
+                                   <input type="password" id="txt-password" class="form-control"placeholder="Contraseña">
                                    <input type="text" name="txt-nombreEmpresa" id="txt-nombreEmpresa" class="form-control" placeholder="Nombre de la empresa">
-                                   <select class="form-control">
+                                   <select class="form-control" id="slc-tipoEmpresa">
                                        <option>Tipo de empresa</option>
                                        <option>Profesional (p. ej., fotógrafo, creador de blogs, diseñador)</option>
                                        <option>Personaje público (p. ej., político, atleta, músico, actor)</option>
@@ -49,8 +49,9 @@
                                        <option>Institución/Organización benéfica (p. ej., El Prado, Reina Sofía)</option>
                                        <option>Otros </option>
                                    </select>
-                                   <input type="text" placeholder="sitio web                 opcional"  class="form-control">
-                                   <a href="pinterest.html"><button type="button" class="btn btn-default btn-lg form-control">Crear cuenta</button></a>
+                                   <input type="text" id="txt-web" placeholder="sitio web                 opcional"  class="form-control">
+                                   <input type="button" class="btn btn-default btn-lg form-control" onclick="guardarRegistro();" value="Crear Cuenta">
+                                   <input type="button" name="btn-ancla" id="btn-ancla" onclick ="parent.location.href('http://www.pagina.com');" >
                               </form>   
                            </div>
                            <div>
@@ -75,5 +76,8 @@
          <a href="pagina-relleno.html" id="parrafos">Mapa del sitio</a>
          <a href="pagina-relleno.html" id="parrafos">Internacional</a>
     </div>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+       <script type="text/javascript" src="js/funciones.js"></script>
+
     </body>
 </html>
