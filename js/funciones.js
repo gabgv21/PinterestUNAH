@@ -201,7 +201,6 @@ function guardarRegistro(){
       }
    }
    else{
-
      $("#txt-correo").css("background-color", "red");
    }
 }

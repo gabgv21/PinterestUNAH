@@ -101,20 +101,17 @@
 													<strong>Te damos la bienvenida a Pinterest</strong>
 												</div>
 											</div>
+											 
 											<div data-test-signup="true" style="margin: 0 auto; position: relative; text-align: center;" data-reactid="16">
 												<div style="margin: 0 auto; width: 268px;" data-reactid="17">
-													<form method="POST" novalidate data-reactid="18">
-														<fieldset style="position: relative; margin-bottom: 7px;" data-reactid="19">
-															<input type="email" id="txt-correo" aria-label="Introduce tu correo electrónico" class name="id" placeholder="Correo electrónico"  value data-reactid="20">
-														</fieldset>
-														<fieldset style="position: relative;" data-reactid="21">
-															<input type="password" id="txt-contrasenna" aria-label="Crea una contraseña" class name="password" placeholder="Crea una contraseña"  value data-reactid="22">
-														</fieldset>
-														<button onclick="validarRegistro();" id="btn-continuar" aria-label="Sigue creando tu cuenta de Pinterest" class="red SignupButton active"
-														type="submit" data-reactid="23">
-															<div>Continuar</div>
-														</button>
-													</form>
+												<div id="div-correo" style="position: relative; margin-bottom: 7px;">
+													<input type="text" id="correo" placeholder="Ingrese su correo" class="form-control" required="required">
+											</div >
+											<div id="div-password" class="form-group" style="position: relative;">
+													<input type="password" id="password" placeholder="Ingrese su contraseña" class="form-control" required="required">
+											</div>
+											<div id="respesta"></div>
+											<button id="enviar" class="red SignupButton active">Continuar</button>
 													<p class style="margin-bottom: 3px; overflow: hidden; text-align: center; color: #555; font-weight: bold; transform: translateY(5px);" data-reactid="25">O</p>
 													<div data-reactid="26">
 														<div style="position: relative;" data-reactid="27">
@@ -181,5 +178,6 @@
 	<script type="text/javascript" src="js/funcionalidades-login.js"></script>
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="js/validar.js" type="text/javascript" ></script>
 </body>
 </html>
