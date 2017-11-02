@@ -1,3 +1,9 @@
+jQuery(document).ready(function($) {
+
+    //Incremental Coutner
+    if ($.isFunction($.fn.incrementalCounter))
+        $("#incremental-counter").incrementalCounter();
+});
 
 function botonAmarillo() {
 	$("#btn-amarillo").css("background-color","#ffc908");
@@ -201,11 +207,10 @@ function guardarRegistro(){
       }
    }
    else{
+
      $("#txt-correo").css("background-color", "red");
    }
 }
-
-
 
 $(document).ready(function(){
 
