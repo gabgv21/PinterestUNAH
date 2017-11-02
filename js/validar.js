@@ -16,13 +16,16 @@ $("#enviar").click(function(){
 		$("#div-correo").addClass("has-error");
 	}else{
 		$("#div-correo").removeClass("has-error");	
+
 	}
+
 
 	/*validacion*/
 	if (password != "" && correo != "") {
+		window.location = 'pinterest.html';
 		var parametro = "correo="+correo+"&password="+password;
 		$.ajax({
-			url: "ajax/obtener-elementos-empresa.php",
+			url: "ajax/pagina-sesion.php",
 			method: "POST",
 			data: parametro,
 			success: function(respuesta){
