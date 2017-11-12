@@ -65,9 +65,9 @@
                             var parametros= "nombre="+response.name+"&"+"Email="+response.email+"&"+"Uconexion="+response.updated_time;
                             alert(parametros);
                             $.ajax({
-                            	url:"gestionfb.php?accion=insertar",
+                            	url:"ajax/gestionfb.php?accion=insertar",
                             	data:parametros,
-                            	method:POST,
+                            	method:"POST",
                             	success:function(resultado){
                             		alert("registro agregado");
                             		window.location='pinterest.html';
@@ -90,9 +90,9 @@
             });
         }
 
-        var status = FB.getLoginStatus();
+        //var status = FB.getLoginStatus();
 
-        console.log(status);
+        //console.log(status);
 
         </script>
 	<div class="container">
@@ -149,8 +149,8 @@
 		<a href="login.html"><button id="div-registrar">Registrarte</button></a>
 	</div>
 	</div>
-	<script src="herramientas/bootstrap/jquery/jquery.min.js"></script>
-	<script src="herramientas/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/jquery-3.2.1.min"></script>
+	<script src="js/bootstrap.min.js"></script>
 	<!--<script src="../js/iniciarSesion.js" type="text/javascript" ></script>-->
 </body>
 </html>
