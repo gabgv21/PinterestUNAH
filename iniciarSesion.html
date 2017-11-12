@@ -35,7 +35,7 @@
             FB.login(function(response) {
                 validarUsuario();
 
-            }, {scope: 'public_profile'});            
+            }, {scope: 'public_profile, email'});            
         }
 
         /* function pasar_datos(pagina, campos){
@@ -51,17 +51,36 @@
         function validarUsuario() {  
                 FB.getLoginStatus(function(response) {  
                     if(response.status == 'connected') {  
-                        FB.api('/me', function(response) {  
-                            alert('Hola ' + response.name);
-                            //document.getElementById("div-btnFacebook").href="perfilPinterest.php?name="+response.name;
+                        FB.api('/me?fields=id,name,gender,email,locale,age_range,link,updated_time, picture', function(response) {  
+                            //var nombre = response.name;
+                            //var Email = response.email;
+                            //var genero = response.gender;
+                            //alert(response.id);
+                           	//var edad = response.age_range;
+                            //var local = response.locale;
+                            //var link = response.link;
+                            //var Uconexion = response.updated_time;
 
-                            	})
+                            //alert(nombre+" "+Email+" "+Uconexion);
+                            var parametros= "nombre="+response.name+"&"+"Email="+response.email+"&"+"Uconexion="+response.updated_time;
+                            alert(parametros);
+                            $.ajax({
+                            	url:"gestionfb.php?accion=insertar",
+                            	data:parametros,
+                            	method:POST,
+                            	success:function(resultado){
+                            		alert("registro agregado");
+                            		window.location='pinterest.html';
+                            	}
+                            });
+
+                           })
                     }else if(response.status == 'not_authorized') {  
                         alert('Debes autorizar la app!');  
                    		} else {  
                         	alert('Debes ingresar a tu cuenta de Facebook!');;  
                    		}   
-                    })  
+                    });  
                 } 
                  
 
