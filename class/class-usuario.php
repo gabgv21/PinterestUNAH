@@ -2,6 +2,111 @@
 
 	class Usuario{
 
+<<<<<<< HEAD
+		private $id-usuario;
+		private $nombre-usuario;
+		private $nombre-persona;
+		private $contrasenna;
+		private $email;
+		private $telefono;
+		private $fecha-nacimiento;
+		private $url-foto-perfil;
+		private $id-genero;
+		private $id-tipo-usuario;
+
+		public function __construct($id-usuario,
+					$nombre-usuario,
+					$nombre-persona,
+					$contrasenna,
+					$email,
+					$telefono,
+					$fecha-nacimiento,
+					$url-foto-perfil,
+					$id-genero,
+					$id-tipo-usuario){
+			$this->id-usuario = $id-usuario;
+			$this->nombre-usuario = $nombre-usuario;
+			$this->nombre-persona = $nombre-persona;
+			$this->contrasenna = $contrasenna;
+			$this->email = $email;
+			$this->telefono = $telefono;
+			$this->fecha-nacimiento = $fecha-nacimiento;
+			$this->url-foto-perfil = $url-foto-perfil;
+			$this->id-genero = $id-genero;
+			$this->id-tipo-usuario = $id-tipo-usuario;
+		}
+		public function getId-usuario(){
+			return $this->id-usuario;
+		}
+		public function setId-usuario($id-usuario){
+			$this->id-usuario = $id-usuario;
+		}
+		public function getNombre-usuario(){
+			return $this->nombre-usuario;
+		}
+		public function setNombre-usuario($nombre-usuario){
+			$this->nombre-usuario = $nombre-usuario;
+		}
+		public function getNombre-persona(){
+			return $this->nombre-persona;
+		}
+		public function setNombre-persona($nombre-persona){
+			$this->nombre-persona = $nombre-persona;
+		}
+		public function getContrasenna(){
+			return $this->contrasenna;
+		}
+		public function setContrasenna($contrasenna){
+			$this->contrasenna = $contrasenna;
+		}
+		public function getEmail(){
+			return $this->email;
+		}
+		public function setEmail($email){
+			$this->email = $email;
+		}
+		public function getTelefono(){
+			return $this->telefono;
+		}
+		public function setTelefono($telefono){
+			$this->telefono = $telefono;
+		}
+		public function getFecha-nacimiento(){
+			return $this->fecha-nacimiento;
+		}
+		public function setFecha-nacimiento($fecha-nacimiento){
+			$this->fecha-nacimiento = $fecha-nacimiento;
+		}
+		public function getUrl-foto-perfil(){
+			return $this->url-foto-perfil;
+		}
+		public function setUrl-foto-perfil($url-foto-perfil){
+			$this->url-foto-perfil = $url-foto-perfil;
+		}
+		public function getId-genero(){
+			return $this->id-genero;
+		}
+		public function setId-genero($id-genero){
+			$this->id-genero = $id-genero;
+		}
+		public function getId-tipo-usuario(){
+			return $this->id-tipo-usuario;
+		}
+		public function setId-tipo-usuario($id-tipo-usuario){
+			$this->id-tipo-usuario = $id-tipo-usuario;
+		}
+		public function __toString(){
+			return "Id-usuario: " . $this->id-usuario . 
+				" Nombre-usuario: " . $this->nombre-usuario . 
+				" Nombre-persona: " . $this->nombre-persona . 
+				" Contrasenna: " . $this->contrasenna . 
+				" Email: " . $this->email . 
+				" Telefono: " . $this->telefono . 
+				" Fecha-nacimiento: " . $this->fecha-nacimiento . 
+				" Url-foto-perfil: " . $this->url-foto-perfil . 
+				" Id-genero: " . $this->id-genero . 
+				" Id-tipo-usuario: " . $this->id-tipo-usuario;
+=======
 		private $IdUsuario;
 		private $NombredeUsuario;
 		private $Nombre;
@@ -139,6 +244,7 @@
 
 		public static function Insertar($conexion,$nombre,$email,$ultima){
 			$resultado = $conexion->ejecutarconsulta("INSERT INTO usuarios(nombre_usuario,email, ultima_conexion) VALUES ($nombre,$email,$ultima)");
+>>>>>>> 48fa696af1936e44be45fa50724eca95d3d46ed3
 		}
 	}
 ?>
