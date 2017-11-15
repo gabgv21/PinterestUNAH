@@ -33,26 +33,15 @@
             FB.login(function(response) {
                 validarUsuario();
 
-            }, {scope: 'public_profile'});            
+            }, {scope: 'public_profile, email'});            
         }
 
-        /* function pasar_datos(pagina, campos){
-                            	pagina +="?";
-                            	vectorcamp = nombre.split(",");
-                            	for(i=0;i<vectorcamp.length;i++){
-                            		pagina+= vectorcamp[i]+"="+escape(eval(vectorcamp[i]))+"&";
-                            	}
-                            	pagina=pagina.substring(0,pagina.length-1);
-                            	locatio.href=pagina
-
-                            } */ 
         function validarUsuario() {  
                 FB.getLoginStatus(function(response) {  
                     if(response.status == 'connected') {  
-                        FB.api('/me', function(response) {  
+                        FB.api('/me?fields=id,name,gender,email,locale,age_range,link,updated_time, picture', function(response) {  
                             alert('Hola ' + response.name);
-                            //document.getElementById("div-btnFacebook").href="perfilPinterest.php?name="+response.name;
-
+                           	var parametros = 'Email='+response.email;
                             	})
                     }else if(response.status == 'not_authorized') {  
                         alert('Debes autorizar la app!');  
@@ -68,11 +57,6 @@
               // user is now logged out
             });
         }
-
-        var status = FB.getLoginStatus();
-
-        console.log(status);
-
         </script>
 		<div>
 			<div style="margin-top:100px;">
@@ -89,6 +73,8 @@
 						</div>
 						<div style="margin:0px auto; position:relative; text-align: center; ">
 							<div style="margin: 0px auto; width: 268px;">
+								
+
 								<form method="POST" action="ajax/crear-usuario.php">
 									<fieldset style="position: relative; margin-bottom: 7px;">
 										<input type="text" id="txt-correo" name="txt-correo" aria-label="Ingrese su correo Electrónico" autocomplete="username" class name="id" placeholder="Correo Electrónico" style="background-color: rgb(240,240,240);border:0px; box-shadow:none;position:relative;-webkit-font-smoothing:antialiased;border-radius:3px;font-weight:bold;padding:10px;box-sizing:border-box;width:100%;color:rgb(51,51,51);font-size:14px;outline:none;">

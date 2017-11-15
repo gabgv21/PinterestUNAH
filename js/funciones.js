@@ -225,7 +225,7 @@ $.ajax({
   },
   error: function(e){
 
-  alert(e);
+  
 
   },
 
