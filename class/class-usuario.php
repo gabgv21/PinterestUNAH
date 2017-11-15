@@ -152,9 +152,45 @@
 		}
 
 
+
+       public function guardarUsuario($conexion)
+          { $consulta = sprintf("INSERT INTO usuarios(nombre_usuario,nombre_persona,contrasenna,email,fecha_nacimiento,seguidores,siguiendo,ID_genero,ID_tipo_usuario,url_foto_perfl)
+          	VALUES ('%s','%s','%s','%s','%s','%s','%s','%s','%s','%s')",
+          	$conexion->antiInyeccion($this->nombre_usuario),
+            $conexion->antiInyeccion($this->nombre_persona),
+            $conexion->antiInyeccion($this->contrasenna),
+            $conexion->antiInyeccion($this->email),
+            $conexion->antiInyeccion($this->fecha_nacimiento),
+            $conexion->antiInyeccion("100"),
+            $conexion->antiInyeccion("50"),
+            $conexion->antiInyeccion($this->genero),
+            $conexion->antiInyeccion("4"),
+             $conexion->antiInyeccion("foto_default.png")
+          );
+
+          $resultado = $conexion->ejecutarconsulta($consulta);
+          $_SESSION["nombre_usuario"] = $this->nombre_usuario;
+		    	$_SESSION["nombre_persona"] = $this->nombre_usuario;
+                 $_SESSION["siguiendo"] ="50";
+                 $_SESSION["seguidores"] = "100";
+                 $_SESSION["url_foto_perfl"] ="foto_default.png";
+          $respuesta=  array();
+          $respuesta["estatus"] = 1;
+          echo json_encode($respuesta);
+
+          }
+
+
+
+
+
+
+
+
+
 		public static function verificarUsuario($conexion,$email,$contra){
 		    $sql = sprintf(
-		    		"SELECT  nombre_usuario,nombre_persona,contrasenna, email,ID_tipo_usuario FROM usuarios WHERE contrasenna = '%s' AND email = '%s'",
+		    		"SELECT  nombre_usuario,nombre_persona,contrasenna, email,ID_tipo_usuario,siguiendo,seguidores,url_foto_perfl FROM usuarios WHERE contrasenna = '%s' AND email = '%s'",
 		    		$contra,
 		    		$email
 
@@ -169,7 +205,9 @@
 		    	$respuesta["estatus"]=1;
 		    	$_SESSION["nombre_usuario"] = $fila["nombre_usuario"];
 		    	$_SESSION["nombre_persona"] = $fila["nombre_persona"];
-
+                 $_SESSION["siguiendo"] = $fila["siguiendo"];
+                 $_SESSION["seguidores"] = $fila["seguidores"];
+                 $_SESSION["url_foto_perfl"] = $fila["url_foto_perfl"];
 		    	$respuesta["ID_tipo_usuario"]=$fila["ID_tipo_usuario"];
 		    }else{
 		    	$respuesta["estatus"]=0;

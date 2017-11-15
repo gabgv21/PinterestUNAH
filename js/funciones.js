@@ -212,80 +212,85 @@ function guardarRegistro(){
    }
 }
 
-/*pendiente es para el registro de usuarios
-$("#btn-acceder").click(function(){
+
+/*$("#btn-acceder").click(function(){
    var parametros = "txt-correo="+$("#txt-correo").val()+"&"+"txt-password="+$("#txt-password").val();
-   $("#div-login").html('');
    
-
-
-
-   if()
-     {  $.ajax({
-        url:"ajax/gestion-usuario.php?accion=login",
+      $.ajax({
+        url:"Datosregistro.php",
         data: parametros,
         method:"POST",
         success:function(respuesta){
-         alert(respuesta);
+         console.log(respuesta);
+         window.location = "Datosregistro.php";
         },
         error:function(e){
           console.log(e);
-        };
+        }
 
        });
-     }
+     
+});*/
+
+$("#div-btnSesion-2").click(function(){
+
+  
+ if($("#txt-nombre-completo").val()&&$("#txt-password").val()&&$("#txt-correo").val()&&$("#txt-fecha").val())
+   {
+        var parametros = "txt-correo="+$("#txt-correo").val()+"&"+"txt-password="+$("#txt-password").val()+
+                   "&txt-nombre-completo="+$("#txt-nombre-completo").val()+"&txt-fecha="+$("#txt-fecha").val()+
+                   "&rbt-genero="+$("input[type='radio'][name='rbt-genero']:checked").val();
+
+    $.ajax({
+        url:"ajax/gestion-usuario.php?accion=crear-usuario",
+        data: parametros,
+        method:"POST",
+        dataType:'json',
+        success:function(respuesta){
+          if (respuesta.estatus==1) {
+           window.location = "pinterest.php";
+         }else{
+          alert("hubo un problema");
+         }
+        },
+        error:function(e){
+          console.log(e);
+        }
+  
+});
 }
-*/
+else{$("#div-error-2").html("Verifique los datos")
+}
+});
 
 
 $("#div-btnSesion").click(function(){
-  var parametros = "txt-correo="+$("#div-telefono-contrasena").val()+"&"+"txt-password="+$("#contrasenna").val();
+  if(($("#div-telefono-contrasena").val())&&($("#contrasenna").val()))
+     { var parametros = "txt-correo="+$("#div-telefono-contrasena").val()+"&"+"txt-password="+$("#contrasenna").val();
 
-   $.ajax({
-    url:"ajax/gestion-usuario.php?accion=login",
-    data: parametros,
-    method:"POST",
-    dataType:'json',
-    success:function(respuesta){
-     if(respuesta.estatus==1)
-     {
-      window.location = "pinterest.php";
-     }
-     else
-       {
-        alert("Usuario Invalido");
-       }
-    },
-    error:function(e){
-      console.log(e);
-    }
+       $.ajax({
+        url:"ajax/gestion-usuario.php?accion=login",
+        data: parametros,
+        method:"POST",
+        dataType:'json',
+        success:function(respuesta){
+         if(respuesta.estatus==1)
+         {
+          window.location = "pinterest.php";
+         }
+         else
+           {
+            $("#div-usuario-incorrecto").html("usuario incorrecto");
+           }
+        },
+        error:function(e){
+          console.log(e);
+        }
 
-   });
+       });
+      }
+      else{
+        $("#div-usuario-incorrecto").html("Olvido llenar algun dato");
+      }
 });
 
-
-
-
-$(document).ready(function(){
-
-$.ajax({
-
-  url: "ajax/obtener-elementos-empresa.php",
-  data: "",
-  method: "POST",
-  success: function(respuesta){
-    $("#slc-tipoEmpresa").html(respuesta);
-   
-  },
-  error: function(e){
-
-  
-
-  },
-
-
-});
-
-
-
-})

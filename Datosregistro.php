@@ -30,29 +30,26 @@
 					</div>
 
 					<div id="div-texto">
+						<div id="div-error-2" style="color: red;"></div>
 						<div id="div-espacio">
 							<form>
 							<b>Nombre Completo</b>
-							<input type="email" aria-label="Correo o número de teléfono"  id="div-telefono-contrasena"><br>
+							<input type="text" aria-label="Correo o número de teléfono" class="cajas-de-texto"  id="txt-nombre-completo"><br>
 							<br>
 
 
-							<select placeholder="EDAD" id="div-telefono-contrasena">
-								<option> Menos de 18 años</option>
-								<option> De 19 a 30 años</option>
-								<option> De 31 a 42 años</option>
-								<option> De 42 a 53 años</option>
-								<option> De 54 a 65 años</option>
-							</select>
+							<input type="date" class="cajas-de-texto" name="txt-fecha" id="txt-fecha" placeholder="Edad">
 
 
-							<colspan><input type="radio" name=""><b>Hombre</b>  <input type="radio" name="" style="position:relative;"><b>Mujer</b></colspan><div style="height: 10px"></div>
-							<input type="radio" name="" style=""><b>Personalizado</b>
+							<colspan>
+								<label><input value="1" type="radio" name="rbt-genero"><b>Hombre</b></label>
+								<label><input type="radio" name="rbt-genero" value="2" style="position:relative;"><b>Mujer</b></label></colspan><div style="height: 10px"></div>
+							<label><input type="radio" name="rbt-genero" value="3" style=""><b>Personalizado</b></label>
 						</form>
 						</div>
 
 						<div>
-							<a href="pinterest.html"><button class="red SignupButton active" id="div-btnSesion" type="submit"><div>Registrate</div></button></a>
+							<button class="red SignupButton active" id="div-btnSesion-2"><div>Registrate</div></button>
 						</div>
 							<div style="height: 10px"></div>
 							<a rel="button" href="iniciarSesion.html" ><b>Volver</b> </a>
@@ -83,5 +80,17 @@
 	<script src="herramientas/bootstrap/js/bootstrap.min.js"></script>
 
 	<!--<script src="../js/iniciarSesion.js" type="text/javascript" ></script>-->
+	<input type="email" name="txt-correo" id="txt-correo" style="visibility: hidden;"
+      <?php
+       echo'value="'.$_POST["txt-correo"].'"'
+     ?>
+	 >
+	<input type="password" name="txt-password" id="txt-password"  style="visibility:hidden;" 
+     <?php
+       echo'value="'.$_POST["txt-password"].'"'
+     ?>
+	>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+<script src="js/funciones.js"></script>
 </body>
 </html>

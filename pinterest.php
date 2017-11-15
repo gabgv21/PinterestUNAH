@@ -72,7 +72,7 @@ session_start();
                 <li><a href="#">Cambiar a una cuenta para empresas</a></li>
                 <li><a href="#">Terminos y Privacidad</a></li>
                  <li role="separator" class="divider"></li>
-                <li><a href="#">Salir</a></li>
+                <li><a href="cerrarSesion.php">Salir</a></li>
               </ul>
               
             </li>

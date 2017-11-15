@@ -129,13 +129,17 @@ session_start();
 			<p class="nombre-usuario">
 				<?php
 
-                 echo $_SESSION["nombre_usuario"];
+                 echo $_SESSION["nombre_persona"];
 				?>
 			</p>
 
 			<p style=" margin: -40px 300px 0px 350px; color: grey; opacity: 0.7; font-size: 16px;"><b> seguidores &nbsp siguiendo</b></p>
 
-			<span><img src="img/perritu.jpg" width="190" height="190" class="redondo"></span>
+			<span><img 
+				<?php
+                         echo 'src="img/perflies/'.$_SESSION["url_foto_perfl"].'"';
+			          ?>
+			 width="190" height="190" class="redondo"></span>
 
 		<button class="boton-personalizado">Tableros</button>
 		<button class="boton-personalizado">Pines</button>
