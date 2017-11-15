@@ -2,106 +2,106 @@
 
 	class Usuario{
 
-		private $IdUsuario;
-		private $NombredeUsuario;
-		private $Nombre;
-		private $Contraseña;
-		private $Email;
-		private $Telefono;
-		private $FechaNacimiento;
-		private $UrlFotoPerfil;
-		private $UltimaConexion;
-		private $Seguidores;
+		private $id_usuario;
+		private $nombre_usuario;
+		private $nombre_persona;
+		private $contrasenna;
+		private $email;
+		private $telefono;
+		private $fecha_nacimiento;
+		private $url_foto_perfil;
+		private $ultima_conexion;
+		private $seguidores;
 		private $siguiendo;
 		private $genero;
-		private $tipoUsuario;
+		private $tipo_usuario;
 
-		public function __construct($IdUsuario,
-					$NombredeUsuario,
-					$Nombre,
-					$Contraseña,
-					$Email,
-					$Telefono,
-					$FechaNacimiento,
-					$UrlFotoPerfil,
-					$UltimaConexion,
-					$Seguidores,
+		public function __construct($id_usuario,
+					$nombre_usuario,
+					$nombre_persona,
+					$contrasenna,
+					$email,
+					$telefono,
+					$fecha_nacimiento,
+					$url_foto_perfil,
+					$ultima_conexion,
+					$seguidores,
 					$siguiendo,
 					$genero,
-					$tipoUsuario){
-			$this->IdUsuario = $IdUsuario;
-			$this->NombredeUsuario = $NombredeUsuario;
-			$this->Nombre = $Nombre;
-			$this->Contraseña = $Contraseña;
-			$this->Email = $Email;
-			$this->Telefono = $Telefono;
-			$this->FechaNacimiento = $FechaNacimiento;
-			$this->UrlFotoPerfil = $UrlFotoPerfil;
-			$this->UltimaConexion = $UltimaConexion;
-			$this->Seguidores = $Seguidores;
+					$tipo_usuario){
+			$this->id_usuario = $id_usuario;
+			$this->nombre_usuario = $nombre_usuario;
+			$this->nombre_persona = $nombre_persona;
+			$this->contrasenna = $contrasenna;
+			$this->email = $email;
+			$this->telefono = $telefono;
+			$this->fecha_nacimiento = $fecha_nacimiento;
+			$this->url_foto_perfil = $url_foto_perfil;
+			$this->ultima_conexion = $ultima_conexion;
+			$this->seguidores = $seguidores;
 			$this->siguiendo = $siguiendo;
 			$this->genero = $genero;
-			$this->tipoUsuario = $tipoUsuario;
+			$this->tipo_usuario = $tipo_usuario;
 		}
-		public function getIdUsuario(){
-			return $this->IdUsuario;
+		public function getId_usuario(){
+			return $this->id_usuario;
 		}
-		public function setIdUsuario($IdUsuario){
-			$this->IdUsuario = $IdUsuario;
+		public function setId_usuario($id_usuario){
+			$this->id_usuario = $id_usuario;
 		}
-		public function getNombredeUsuario(){
-			return $this->NombredeUsuario;
+		public function getNombre_usuario(){
+			return $this->nombre_usuario;
 		}
-		public function setNombredeUsuario($NombredeUsuario){
-			$this->NombredeUsuario = $NombredeUsuario;
+		public function setNombre_usuario($nombre_usuario){
+			$this->nombre_usuario = $nombre_usuario;
 		}
-		public function getNombre(){
-			return $this->Nombre;
+		public function getNombre_persona(){
+			return $this->nombre_persona;
 		}
-		public function setNombre($Nombre){
-			$this->Nombre = $Nombre;
+		public function setNombre_persona($nombre_persona){
+			$this->nombre_persona = $nombre_persona;
 		}
-		public function getContraseña(){
-			return $this->Contraseña;
+		public function getContrasenna(){
+			return $this->contrasenna;
 		}
-		public function setContraseña($Contraseña){
-			$this->Contraseña = $Contraseña;
+		public function setContrasenna($contrasenna){
+			$this->contrasenna = $contrasenna;
 		}
 		public function getEmail(){
-			return $this->Email;
+			return $this->email;
 		}
-		public function setEmail($Email){
-			$this->Email = $Email;
+		public function setEmail($email){
+			$this->email = $email;
 		}
 		public function getTelefono(){
-			return $this->Telefono;
+			return $this->telefono;
 		}
-		public function setTelefono($Telefono){
-			$this->Telefono = $Telefono;
+		public function setTelefono($telefono){
+			$this->telefono = $telefono;
 		}
-		public function getFechaNacimiento(){
-			return $this->FechaNacimiento;
+		public function getFecha_nacimiento(){
+			return $this->fecha_nacimiento;
 		}
-		public function setFechaNacimiento($FechaNacimiento){
-			$this->FechaNacimiento = $FechaNacimiento;
+		public function setFecha_nacimiento($fecha_nacimiento){
+			$this->fecha_nacimiento = $fecha_nacimiento;
 		}
-		public function getUrlFotoPerfil(){
-			return $this->UrlFotoPerfil;
+		public function getUrl_foto_perfil(){
+			return $this->url_foto_perfil;
 		}
-		public function setUrlFotoPerfil($UrlFotoPerfil){
-			$this->UrlFotoPerfil = $UrlFotoPerfil;
+		public function setUrl_foto_perfil($url_foto_perfil){
+			$this->url_foto_perfil = $url_foto_perfil;
 		}
-		public function getUltimaConexion(){
-			return $this->UltimaConexion;
+		public function getUltima_conexion(){
+			return $this->ultima_conexion;
 		}
-		public function setUltimaConexion($UltimaConexion){
-			$this->UltimaConexion = $UltimaConexion;
+		public function setUltima_conexion($ultima_conexion){
+			$this->ultima_conexion = $ultima_conexion;
 		}
 		public function getSeguidores(){
-			return $this->Seguidores;
+			return $this->seguidores;
 		}
-		public function setSeguidores($Seguidores){
-			$this->Seguidores = $Seguidores;
+		public function setSeguidores($seguidores){
+			$this->seguidores = $seguidores;
 		}
 		public function getSiguiendo(){
 			return $this->siguiendo;
@@ -115,30 +115,64 @@
 		public function setGenero($genero){
 			$this->genero = $genero;
 		}
-		public function getTipoUsuario(){
-			return $this->tipoUsuario;
+		public function getTipo_usuario(){
+			return $this->tipo_usuario;
 		}
-		public function setTipoUsuario($tipoUsuario){
-			$this->tipoUsuario = $tipoUsuario;
+		public function setTipo_usuario($tipo_usuario){
+			$this->tipo_usuario = $tipo_usuario;
 		}
 		public function __toString(){
-			return "IdUsuario: " . $this->IdUsuario . 
-				" NombredeUsuario: " . $this->NombredeUsuario . 
-				" Nombre: " . $this->Nombre . 
-				" Contraseña: " . $this->Contraseña . 
-				" Email: " . $this->Email . 
-				" Telefono: " . $this->Telefono . 
-				" FechaNacimiento: " . $this->FechaNacimiento . 
-				" UrlFotoPerfil: " . $this->UrlFotoPerfil . 
-				" UltimaConexion: " . $this->UltimaConexion . 
-				" Seguidores: " . $this->Seguidores . 
+			return "id_usuario: " . $this->id_usuario . 
+				" nombre_usuario: " . $this->nombre_usuario . 
+				" nombre_persona: " . $this->nombre_persona . 
+				" contrasenna: " . $this->contrasenna . 
+				" email: " . $this->email . 
+				" telefono: " . $this->telefono . 
+				" fecha_nacimiento: " . $this->fecha_nacimiento . 
+				" url_foto_perfil: " . $this->url_foto_perfil . 
+				" ultima_conexion: " . $this->ultima_conexion . 
+				" seguidores: " . $this->seguidores . 
 				" Siguiendo: " . $this->siguiendo . 
 				" Genero: " . $this->genero . 
-				" TipoUsuario: " . $this->tipoUsuario;
+				" tipo_usuario: " . $this->tipo_usuario;
 		}
 
-		public static function Insertar($conexion,$nombre,$email,$ultima){
-			$resultado = $conexion->ejecutarconsulta("INSERT INTO usuarios(nombre_usuario,email, ultima_conexion) VALUES ($nombre,$email,$ultima)");
+		public static function consultar($conexion,$email){
+			$sql= sprintf("SELECT  email  FROM usuarios WHERE email='%s'",
+				$email
+			);
+			$resultado = $conexion->ejecutarconsulta($sql);
+			$cantidadRegistros=$conexion->cantidadRegistros($resultado);
+			if($cantidadRegistros==1){
+				echo "1";
+			}else{
+				echo "0";
+			}
+		}
+
+
+		public static function verificarUsuario($conexion,$contra,$email){
+		    $sql = sprintf(
+		    		"SELECT  contrasenna, email FROM usuarios WHERE contrasenna = '%s'  AND  WHERE  email = '%s'",
+		    		$contra,
+		    		$email
+
+		    	);
+		    //echo ($sql);
+
+		    $resultado = $conexion->ejecutarConsulta($sql);
+		    $cantidadRegistros = $conexion->cantidadRegistros($resultado);
+		    $respuesta=array();
+		    if ($cantidadRegistros==1){
+		    	$respuesta["status"]=1;
+		    }else{
+		    	$respuesta["status"]=0;
+			}
+    
+		    echo json_encode($respuesta);
+
 		}
 	}
 ?>
+
+

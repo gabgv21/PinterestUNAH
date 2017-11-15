@@ -38,39 +38,23 @@
             }, {scope: 'public_profile, email'});            
         }
 
-        /* function pasar_datos(pagina, campos){
-                            	pagina +="?";
-                            	vectorcamp = nombre.split(",");
-                            	for(i=0;i<vectorcamp.length;i++){
-                            		pagina+= vectorcamp[i]+"="+escape(eval(vectorcamp[i]))+"&";
-                            	}
-                            	pagina=pagina.substring(0,pagina.length-1);
-                            	locatio.href=pagina
-
-                            } */ 
         function validarUsuario() {  
                 FB.getLoginStatus(function(response) {  
                     if(response.status == 'connected') {  
                         FB.api('/me?fields=id,name,gender,email,locale,age_range,link,updated_time, picture', function(response) {  
-                            //var nombre = response.name;
-                            //var Email = response.email;
-                            //var genero = response.gender;
-                            //alert(response.id);
-                           	//var edad = response.age_range;
-                            //var local = response.locale;
-                            //var link = response.link;
-                            //var Uconexion = response.updated_time;
 
-                            //alert(nombre+" "+Email+" "+Uconexion);
-                            var parametros= "nombre="+response.name+"&"+"Email="+response.email+"&"+"Uconexion="+response.updated_time;
-                            alert(parametros);
+                            var parametros='Email='+response.email;
+                            //alert(parametros);
                             $.ajax({
-                            	url:"ajax/gestionfb.php?accion=insertar",
+                            	url:"ajax/gestionfb.php?accion=consultar",
                             	data:parametros,
                             	method:"POST",
                             	success:function(resultado){
-                            		alert("registro agregado");
-                            		window.location='pinterest.html';
+                            		if(resultado==1){
+                            		  window.location='pinterest.html';
+                                    }else if(resultado==0){
+                                        window.location='login.html';
+                                    }
                             	}
                             });
 
@@ -90,15 +74,11 @@
             });
         }
 
-        //var status = FB.getLoginStatus();
-
-        //console.log(status);
-
         </script>
 	<div class="container">
 		<div class="row" id="div-contenedor">
 			<div id="div-recuadro">
-				<div id="div-dentroOtroRecuadro">
+				<div id="div-dentroOtroRecuadro" class="form-signin">
 					<div id="div-logo">
 						<img src="img/logo.png" id="div-tamonoLogo">
 					</div>
@@ -113,12 +93,14 @@
 							<input type="email" aria-label="Correo o número de teléfono" name="txt-correo" placeholder="Correo o número de teléfono" id="div-telefono-contrasena">
 						</div>
 						<div>
-							<input type="password" aria-label="Contraseña" name="txt-password"  placeholder="Contraseña" id="div-telefono-contrasena">
+							<input type="password" aria-label="Contraseña" name="txt-password"  placeholder="Contraseña" id="contrasenna">
 						</div id="div-espacio">
+                       
+                    
 						<div>
-							<a href="pinterest.html"><button class="red SignupButton active" id="div-btnSesion" type="submit"><div>Iniciar sesión</div></button></a>
+							<button onclick="iniciarSesion();" class="" id="div-btnSesion" type="button" ><div>Iniciar sesión</div></button>
 						</div>
-                        </form>
+                         </form>
 						<div id="div-espacio"></div>
 						<div>
 							<p id="div-o">O</p>
@@ -152,6 +134,7 @@
 	</div>
 	<script src="js/jquery-3.2.1.min"></script>
 	<script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/controladorIniciarSesion.js"></script>
 	<!--<script src="../js/iniciarSesion.js" type="text/javascript" ></script>-->
 </body>
 </html>

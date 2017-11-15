@@ -36,23 +36,11 @@
             }, {scope: 'public_profile'});            
         }
 
-        /* function pasar_datos(pagina, campos){
-                            	pagina +="?";
-                            	vectorcamp = nombre.split(",");
-                            	for(i=0;i<vectorcamp.length;i++){
-                            		pagina+= vectorcamp[i]+"="+escape(eval(vectorcamp[i]))+"&";
-                            	}
-                            	pagina=pagina.substring(0,pagina.length-1);
-                            	locatio.href=pagina
-
-                            } */ 
         function validarUsuario() {  
                 FB.getLoginStatus(function(response) {  
                     if(response.status == 'connected') {  
                         FB.api('/me', function(response) {  
                             alert('Hola ' + response.name);
-                            //document.getElementById("div-btnFacebook").href="perfilPinterest.php?name="+response.name;
-
                             	})
                     }else if(response.status == 'not_authorized') {  
                         alert('Debes autorizar la app!');  
@@ -68,10 +56,6 @@
               // user is now logged out
             });
         }
-
-        var status = FB.getLoginStatus();
-
-        console.log(status);
 
         </script>
 	<div class="appContent" role="main">
