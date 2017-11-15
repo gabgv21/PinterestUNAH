@@ -1,11 +1,13 @@
-		.input[type=text] {
-		    width: 65%;
+.input[type=text] {
+		    width: 750px;
 		    height: 50px;
-		    margin:20px 20px 0px 25px;
+		    margin:10px 0px 5px 10px;
 		    box-sizing: border-box;
 		    border: 0px solid #ccc;
 		    border-radius: 3px;
-		    font-size: 16px;
+		    font-size: 22px;
+		    font-weight: bold;
+
 		    background-color: #EFEFEF;
 		    background-image: url("search.png");
 		    background-repeat: no-repeat;
@@ -15,11 +17,8 @@
 		    padding: 12px 10px 12px 35px;
 		    -webkit-transition: width 0.4s ease-in-out;
 		    transition: width 0.4s ease-in-out;
-		}
-		.input[type=text]:focus {
-		    width: 65%;
-		}
 
+}
 .margenes{
 
 	margin:0px 20px 0px 30px;
@@ -32,13 +31,15 @@
 .btn-default{
 	 background-color: #fff;
  	 border-color: #fff ;
+ 	 border-radius: 166px 166px 166px 166px;
+	-moz-border-radius: 166px 166px 166px 166px;
+	-webkit-border-radius: 166px 166px 166px 166px;
+	border: 2px solid #ffffff;
 }
 .btn-default:hover{
-	 background-color: #b5b5b5 ;
- 	 border-color: #b5b5b5;
-
+	 background-color: #f2f2f2 ;
+ 	 border-color: #f2f2f2 ;
 }
-
 }
 
 

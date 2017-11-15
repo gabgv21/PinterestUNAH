@@ -15,7 +15,7 @@ body{
     font-weight: 700;
     margin: 0.25rem 0;
     font-size: 24px;
-     margin: 0px 0px 0px 100px;
+    margin: 0px 0px 0px 100px;
 }
 
 .fuente-encabezado{
@@ -52,16 +52,27 @@ body{
 }
 
 .barra-navegacion{
-	color: white;
-	font-size:18px;
-	font-family: inherit;
-	padding: 15px 0px 0px 50px;
+    color: white;
+    font-size:18px;
+    font-family: inherit;
+    padding: 15px 0px 20px 50px;
+}
+
+.barra-navegacion a{
+    color: white;
+    font-size:18px;
+    font-family: inherit;
+    padding: 15px 0px 20px 50px;
+}
+
+.barra-navegacion:hover{
+    background-color: gray;
+    font-size:18px;
+    font-family: inherit;
+    padding: 15px 0px 20px 50px;
 }
 
 #crear-cuenta{
-	color: white;
-	font-size:18px;
-	font-family: inherit;
 	padding: 15px 20px 0px 330px;
 }
 
@@ -76,6 +87,21 @@ body{
     letter-spacing: -2px;
     font-weight: 600;
 }
+
+.seccion1 .texto-usuarios{
+    color: white;
+    font-family: inherit;
+    font-weight: 700;
+    margin: 0.25rem 0;
+    font-size: 24px;
+    margin: 0px 0px 0px 100px;
+}
+
+
+.seccion1 .texto-usuarios a u:hover{
+    color: red;
+}
+
 
 .txt-millones{
 	margin: -110px 0px 0px 700px;
@@ -155,4 +181,35 @@ margin: 80px 20px 0px 0px;
     font-stretch: normal;
     letter-spacing: normal;
     opacity: 0.9;
+}
+
+#incremental-counter .num {
+  background: #f8f8f8 none repeat scroll 0 0;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  color: #27aae1;
+  display: inline-block;
+  height: 64px;
+  line-height: 62px;
+  margin: 0 4px 20px;
+  position: relative;
+  left: -1px;
+  text-align: center;
+  width: 50px;
+  font-size: 45px;
+  font-size: 3.72625em;
+  font-weight: normal;
+  font-family: 'Agency FB', sans-serif;
+}
+#incremental-counter .num::before {
+  background: #00aae6;
+  content: "";
+  display: block;
+  height: 1px;
+  left: -1px;
+  margin: -0.5px 0 0;
+  position: absolute;
+  right: -1px;
+  top: 50%;
+  width: auto;
 }

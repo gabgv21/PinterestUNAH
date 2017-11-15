@@ -109,9 +109,8 @@ textarea{
 	width: 50;
 }
 
-#txt-contrasenna{
+#password{
 	background-color: #f0f0f0;
-	border: 0px;
 	box-shadow: none;
 	position: relative;
 	-webkit-font-smoothing: antialiased;
@@ -131,9 +130,8 @@ textarea{
 	height: 100%;
 }
 
-#txt-correo{
-	background-color: #f0f0f0; 
-	border: 0px; 
+#correo{
+	background-color: #f0f0f0;  
 	-webkit-box-shadow:none; 
 	box-shadow: none; 
 	position: relative; 
@@ -149,7 +147,7 @@ textarea{
 	outline: none;
 }
 
-#btn-continuar{
+#enviar{
 	border: 0px; 
 	height: 36px; 
 	display: inline-block; 
