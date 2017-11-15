@@ -152,9 +152,9 @@
 		}
 
 
-		public static function verificarUsuario($conexion,$contra,$email){
+		public static function verificarUsuario($conexion,$email,$contra){
 		    $sql = sprintf(
-		    		"SELECT  contrasenna, email FROM usuarios WHERE contrasenna = '%s'  AND  WHERE  email = '%s'",
+		    		"SELECT  nombre_usuario,nombre_persona,contrasenna, email,ID_tipo_usuario FROM usuarios WHERE contrasenna = '%s' AND email = '%s'",
 		    		$contra,
 		    		$email
 
@@ -165,9 +165,14 @@
 		    $cantidadRegistros = $conexion->cantidadRegistros($resultado);
 		    $respuesta=array();
 		    if ($cantidadRegistros==1){
-		    	$respuesta["status"]=1;
+		    	$fila = $conexion->obtenerFila($resultado);
+		    	$respuesta["estatus"]=1;
+		    	$_SESSION["nombre_usuario"] = $fila["nombre_usuario"];
+		    	$_SESSION["nombre_persona"] = $fila["nombre_persona"];
+
+		    	$respuesta["ID_tipo_usuario"]=$fila["ID_tipo_usuario"];
 		    }else{
-		    	$respuesta["status"]=0;
+		    	$respuesta["estatus"]=0;
 			}
     
 		    echo json_encode($respuesta);

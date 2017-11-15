@@ -212,6 +212,60 @@ function guardarRegistro(){
    }
 }
 
+/*pendiente es para el registro de usuarios
+$("#btn-acceder").click(function(){
+   var parametros = "txt-correo="+$("#txt-correo").val()+"&"+"txt-password="+$("#txt-password").val();
+   $("#div-login").html('');
+   
+
+
+
+   if()
+     {  $.ajax({
+        url:"ajax/gestion-usuario.php?accion=login",
+        data: parametros,
+        method:"POST",
+        success:function(respuesta){
+         alert(respuesta);
+        },
+        error:function(e){
+          console.log(e);
+        };
+
+       });
+     }
+}
+*/
+
+
+$("#div-btnSesion").click(function(){
+  var parametros = "txt-correo="+$("#div-telefono-contrasena").val()+"&"+"txt-password="+$("#contrasenna").val();
+
+   $.ajax({
+    url:"ajax/gestion-usuario.php?accion=login",
+    data: parametros,
+    method:"POST",
+    dataType:'json',
+    success:function(respuesta){
+     if(respuesta.estatus==1)
+     {
+      window.location = "pinterest.php";
+     }
+     else
+       {
+        alert("Usuario Invalido");
+       }
+    },
+    error:function(e){
+      console.log(e);
+    }
+
+   });
+});
+
+
+
+
 $(document).ready(function(){
 
 $.ajax({
