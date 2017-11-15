@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="css/estiloperfil.css">
+	<link rel="stylesheet" type="text/css" href="css/configuracion.css">
 
 	<title>Pinterest • El catálogo global de ideas</title>
 	<link rel="icon" href="img/favicon" sizes="16x16" type="image/jpg">
@@ -13,10 +13,10 @@
 	<div>
 		<a href="pinterest.html"><button type="button" class=" btn btn-default cambiacolor"  style="margin-left: 20px; font-weight:bold; ">
 	   	 <img src="img/logo.png" height="34" width="34"><br><p class="tamaño"></p>
-	   </button></a>
+	   </button> </a>
 	
 	
-		<input type="text" name="search" id=search placeholder="Buscar" class="input">
+		<input type="text" name="search" id=search placeholder="buscar" class="input" w>
 	 
 	
 		<button type="button" class="btn btn-default cambiacolor" >
@@ -58,18 +58,18 @@
 		</div>	
 		<div class="container">
 			<div class="row">			
-					<div class="col-lg-6">
-						<h2>Apectos básicos de la cuenta</h2>
-						<p>Correo</p>
-						<input type="TEXT" name="" class="btn-default form-control">
-						<p style="gb(85, 85, 85); display: block; font-family: Helvetica;font-size: 16px; font-style: normal; font-weight :normal;height: 18px; hyphens: manual; letter-spacing: -0.2px; line-height: 18px;text-align: left; text-size-adjust: 100%;">Ccontraseña</p>
+					<div class="aspectos">
+						<h2>Aspectos básicos de la cuenta</h2>
+						<p>Direccion de Correo</p>
+						<input type="TEXT" name="" class="input">
+						<p >Contraseña</p>
 
-						<input type="TEXT" name="" class="btn-default form-control" value="Cambiar Contraseña">
+						<input type="TEXT" name="" class="input" value="Cambiar tu Contraseña">
 						<p>Idioma</p>
-						<select class="form-control">
-							<option>Español (Américas)</option>
-							<option>Español (España)</option>
-							<option>Caliche x) </option>
+						<select class="input">
+							<option >Español (Américas)</option>
+							<option >Español (España)</option>
+							<option >Caliche x) </option>
 						</select>
 						<p>Género</p>
 						<label><input type="radio" name="">Hombre</label>
@@ -81,9 +81,9 @@
 						<label><input type="checkbox" name="">Usa los sitios que visitas para mejorar las recomendaciones y anuncion que se mostrarán <a href="">Más información</a></label>
 						<label><input type="checkbox" name="">Utiliza la información de nuestros socios para mejorar las recomendadiones y los anuncios que se te mostrarán <a href="">Más información</a></label>
 						<p>Historial de búsqueda</p>
-						<label><input type="button" name="" class="btn btn-default cambiacolor" value="Borrar búsquedas recientes">Eliminar de las sugerencias de búsqueda los elementos buscados recientemente</label>
+						<button class="boton"><div class="btn-busquedas">Borrar Busquedas recientes</div></button>
 						<p>Cuenta</p>
-						<input type="button" name="" class="btn-default btn cambiacolor" value="Desactivar cuenta">
+						<button class="boton"><div class="btn-busquedas">Desactivar cuenta</div></button>
 						<h2>Perfil</h2>
 						<table cellspacing="10px" class="table-hover">
 							<tr>
@@ -106,7 +106,7 @@
 						<input type="text" name="">
 						<p>Sitio web</p>
 						<input type="text" name="">
-						<input type="button" name="" value="confirmar sitio web">
+						<button class="boton"><div class="btn-busquedas">Confirmar sitio web</div></button>
 						<h2>Notificaciones</h2>
 						<p>Siempre te informaremos sobre los cambios importantes, pero tú debes elegir sobre qué más quieres saber</p>
 						<div>
@@ -120,7 +120,7 @@
 						<h2>Seguridad</h2>
 						<p>Esta es la lista de dispositivos que han iniciado sesión en tu cuenta.</p>
 						<p>Anula las sesiones que no reconozcas</p>
-						<input type="button" name=""  class="btn" value="Mostrar sesiones">
+						<button class="boton"><div class="btn-busquedas">Mostrar sesiones</div></button>
 					</div>
 					<!--<div data-test-login="true" style="background-color:#fff;border-radius:8px;position:relative;text-align:center;width:404px;margin:auto;min-height:520px;box-shadow:0 2px 10px rgba(0,0,0,0.45);"></div>-->
 			</div>	
