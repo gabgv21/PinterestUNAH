@@ -4,6 +4,9 @@
   {
   	header("location: paginaPrincipal.html");
   }
+  else if($_SESSION["ID_tipo_usuario"]!=1){
+  	header("location: pinterest.php");
+  }
 
 ?>
 
@@ -21,7 +24,7 @@
 </head>
 <body>
 	<div>
-		<a href="pinterest.html"><button type="button" class=" btn btn-default cambiacolor"  style="margin-left: 20px; font-weight:bold; ">
+		<a href="pinterest.php"><button type="button" class=" btn btn-default cambiacolor"  style="margin-left: 20px; font-weight:bold; ">
 	   	 <img src="img/logo.png" height="34" width="34"><br><p class="tamaño"></p>
 	   </button> </a>
 	
@@ -29,16 +32,16 @@
 		<input type="text" name="search" id=search placeholder="Buscar" class="input" w>
 	 
 	
-		<button type="button" class="btn btn-default cambiacolor" >
+		<a href="pinterest.php"><button type="button" class="btn btn-default cambiacolor" >
 			<i style="color:#969696" class="fa fa-navicon fa-2x "><br><p style="font-family: helvetica; font-weight:bold; " class="tamaño">Inicio</p></i>
-		</button>
+		</button></a>
 	
 	
-		<button type="button" class="btn btn-default cambiacolor" >
+		<a href="perfilPinterest.php"><button type="button" class="btn btn-default cambiacolor" >
 			<i style="color:#969696" class="fa fa-user fa-2x "><br><div style="height: 24px; width: 24px;"><div style="background-color: #EFEFEF; padding-bottom: 100%;"></div></div><p style="font-family: helvetica;font-weight: bold;" class="tamaño"><?php
              echo $_SESSION["nombre_persona"];
 			?></p></i>
-		</button>
+		</button></a>
 	
 	
 		<button type="button" class="btn btn-default cambiacolor" >
