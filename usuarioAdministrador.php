@@ -1,3 +1,12 @@
+<?php  
+  session_start();
+  if(!(isset($_SESSION["nombre_persona"])))
+  {
+  	header("location: paginaPrincipal.html");
+  }
+
+?>
+
 <!DOCTYPE html>
 <!--@arodriguez!-->
 <html>
@@ -26,7 +35,9 @@
 	
 	
 		<button type="button" class="btn btn-default cambiacolor" >
-			<i style="color:#969696" class="fa fa-user fa-2x "><br><div style="height: 24px; width: 24px;"><div style="background-color: #EFEFEF; padding-bottom: 100%;"></div></div><p style="font-family: helvetica;font-weight: bold;" class="tamaño">Nombre Usuario</p></i>
+			<i style="color:#969696" class="fa fa-user fa-2x "><br><div style="height: 24px; width: 24px;"><div style="background-color: #EFEFEF; padding-bottom: 100%;"></div></div><p style="font-family: helvetica;font-weight: bold;" class="tamaño"><?php
+             echo $_SESSION["nombre_persona"];
+			?></p></i>
 		</button>
 	
 	

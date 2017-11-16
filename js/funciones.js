@@ -292,7 +292,13 @@ $("#div-btnSesion").click(function(){
         success:function(respuesta){
          if(respuesta.estatus==1)
          {
-          window.location = "pinterest.php";
+          if(respuesta.ID_tipo_usuario == 4)
+            {
+              window.location = "pinterest.php";
+            }
+            else if(respuesta.ID_tipo_usuario == 1){
+              window.location = "usuarioAdministrador.php";
+            }
          }
          else
            {
@@ -324,7 +330,13 @@ $("#enviar").click(function(){
         success:function(respuesta){
          if(respuesta.estatus==1)
          {
-          window.location = "pinterest.php";
+          if(respuesta.ID_tipo_usuario == 4)
+            {
+              window.location = "pinterest.php";
+            }
+            else if(respuesta.ID_tipo_usuario == 1){
+              window.location = "usuarioAdministrador.php";
+            }
          }
          else
            {

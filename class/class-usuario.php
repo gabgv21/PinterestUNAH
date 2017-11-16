@@ -211,6 +211,7 @@
                  $_SESSION["siguiendo"] = $fila["siguiendo"];
                  $_SESSION["seguidores"] = $fila["seguidores"];
                  $_SESSION["url_foto_perfl"] = $fila["url_foto_perfl"];
+                  $_SESSION["ID_tipo_usuario"] = $fila["ID_tipo_usuario"];
 		    	$respuesta["ID_tipo_usuario"]=$fila["ID_tipo_usuario"];
 		    }else{
 		    	$respuesta["estatus"]=0;
