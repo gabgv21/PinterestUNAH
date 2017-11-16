@@ -1,0 +1,152 @@
+.bienvenida
+	{ margin: 0px 0px 0px 400px;
+	font-family: Helvetica; 
+	font-size: 5rem;
+	color: #555555;
+	font-stretch: bolder;
+
+
+}
+
+.div-secundario{
+	
+}
+
+.botones{
+	background-color: #555555;
+}
+.input[type=text] {
+		    width: 850px;
+		    height: 40px;
+		    margin:10px 0px 5px 10px;
+		    box-sizing: border-box;
+		    border: 0px solid #ccc;
+		    border-radius: 3px;
+		    font-size: 22px;
+		    font-weight: bold;
+
+		    
+		    background-repeat: no-repeat;
+		    background-size: 20px
+		    background-position: 10px 20px; 
+		    background-repeat: no-repeat;
+		    padding: 12px 10px 12px 35px;
+		    -webkit-transition: width 0.4s ease-in-out;
+		    transition: width 0.4s ease-in-out;
+
+}
+
+
+.btn-default{
+	 background-color: #fff;
+ 	 border-color: #fff ;
+ 	 border-radius: 166px 166px 166px 166px;
+	-moz-border-radius: 166px 166px 166px 166px;
+	-webkit-border-radius: 166px 166px 166px 166px;
+	border: 2px solid #ffffff;
+}
+.btn-default:hover{
+	 background-color: #f2f2f2 ;
+ 	 border-color: #f2f2f2 ;
+}
+
+
+.elemento{
+	width: 260px;
+	background: #fff;
+	float:left;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	box-shadow:  0  1px 2px 0 rgba(0,0,0,0.22);
+
+}
+
+.cambiacolor:hover{
+	font-color:red;
+
+}
+
+.tamaño{
+	font-size:14px;
+}
+
+.glyphicon {
+    font-size: 30px;
+}
+
+
+
+.btn-busquedas{
+	letter-spacing: -.2px;
+    line-height: 18px;
+    word-spacing: 0;
+    font-size: 16px; 
+    font-family: Helvetica;
+    font-weight: 700;
+    color: #555;
+    text-align: center;
+    font-style: normal;
+
+}
+
+.redondo{
+
+border-radius: 600px;
+overflow: hidden;
+margin: -40px 440px;
+
+}
+
+.boton-personalizado{
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bolder;
+    font-size: 18px;
+    border-radius: 15px;
+    margin: 55px 0px 0px 0px;
+    background-color: #EFEFEF;
+    border-color: transparent;
+
+  }
+
+
+  .boton{
+  	    box-sizing: border-box;
+  	    padding: 11px 14px;
+  	    border: 0;
+  	    background-color: #efefef;
+  	    cursor: pointer;
+        border-radius: 4px;
+  }
+
+ .buscador{
+   
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    color: #555;
+    font-size: 16px;
+    font-weight: 600;
+    height: 100%;
+    line-height: 20px;
+    outline: none;
+    padding: 0;
+    text-overflow: ellipsis;
+    width: 100%;
+
+}
+.busqueda{
+ 
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  color: #555;
+  font-size: 16px;
+  font-weight: 600;
+  height: 100%;
+  line-height: 20px;
+  outline: none;
+  padding: 0;
+  text-overflow: ellipsis;
+  width: 100%; }

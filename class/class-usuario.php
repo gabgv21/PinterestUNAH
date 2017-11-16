@@ -138,9 +138,9 @@
 				" tipo_usuario: " . $this->tipo_usuario;
 		}
 
-		public static function consultar($conexion,$nombreU,$email){
-			$sql= sprintf("SELECT nombre_usuario ,email  FROM usuarios WHERE nombre_usuario='%s' AND email='%s'",
-				$nombreU,
+		public static function consultar($conexion,$nombreP,$email){
+			$sql= sprintf("SELECT nombre_persona,email  FROM usuarios WHERE nombre_persona='%s' AND email='%s'",
+				$nombreP,
 				$email
 			);
 			$resultado = $conexion->ejecutarconsulta($sql);
