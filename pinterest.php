@@ -83,7 +83,7 @@ session_start();
     </nav>
 	<!--<i class="fa fa-camera-retro"></i> fa-camera-retro-->
 	<div  class="contenedor" style="margin-top: 100px;">
-		<div id="div-imagenes">
+		<div id="div-imagenes" style="">
 			
 		</div>
 

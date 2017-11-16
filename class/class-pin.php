@@ -60,15 +60,27 @@
 
 	public static function obtenerPin($conexion){
 			$resultado = $conexion->ejecutarConsulta('SELECT ID_pin, url_pin, fecha_publicacion, ID_usuario, ID_tema_de_pin FROM pines');
-
-			echo "<div class='col-md-2'>";
+			echo '<div class="container">
+  				<div class="row">';
 			while(($fila=$conexion->obtenerFila($resultado))){
+    						echo '<div class="col-lg-3 col-sm-6 col-md-4 col-xs-12">';
+    						echo "<img src =".$fila['url_pin']." class='img-responsive'> <br>";
+    					for ($i=1; $i <= 4; $i++) { 
+    						
+    						
+    						echo "</div>";	
+
+    	}
+    	echo "</div></div>";
 			
-    		echo "<div class='thumbnail'>";
-			echo "<img src=".$fila['url_pin'].">";
-			echo "</div>";
-		}echo "</div>";
+		}
 		}
 	}
-//NI LA PUTA IDEA DE COMO PONER ESA SHIT EN COLUMNAS DE 5
+/*NI LA PUTA IDEA DE COMO PONER ESA SHIT EN COLUMNAS DE 5
+echo "<div class='col-lg-6'>";
+    		echo "<img src=".$fila['url_pin']." class='img-responsive>";
+			echo "</div>";
+		}
+		echo "</div>";
+		*/
     	?>
