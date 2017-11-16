@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -55,13 +58,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>-->
-          <a class="navbar-brand" href="pinterest.html"><img src="img/logo.png" height="38" width="38" style="margin-left: 15px;"></a>
+          <a class="navbar-brand" href="pinterest.php"><img src="img/logo.png" height="38" width="38" style="margin-left: 15px;"></a>
           <input type="text" name="search" id=search placeholder="Buscar" style="font-weight: bold; width: 750px;" class="input" >
         </div>
         <div id="navbar" class="navbar-collapse collapse" style="margin-right: 40px;">
           <ul class="nav navbar-nav  navbar-right">
-            <li class="btn btn-default" style="font-size: 20px; font-weight: bold;"><a href="pinterest.html" class="" type="button">Inicio</a></li>
-            <li class="btn btn-default" style="font-size: 20px; font-weight: bold;"><a href="perfilPinterest.html"><img src="img/Rose-shield2.png" height="25" width="25">Perfil</a></li>
+            <li class="btn btn-default" style="font-size: 20px; font-weight: bold;"><a href="pinterest.php" class="" type="button">Inicio</a></li>
+            <li class="btn btn-default" style="font-size: 20px; font-weight: bold;"><a href="perfilPinterest.php"><img src="img/Rose-shield2.png" height="25" width="25">Perfil</a></li>
 
             <li class="dropdown" ">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/categoriasreal.png"> <span class=""></span></a>
@@ -101,7 +104,7 @@
                 <li><a href="#">Cambiar a una cuenta para empresas</a></li>
                 <li><a href="#">Terminos y Privacidad</a></li>
                  <li role="separator" class="divider"></li>
-                <li><a href="#">Salir</a></li>
+                <li><a href="cerrarSesion.php">Salir</a></li>
               </ul>
               
             </li>
@@ -123,11 +126,20 @@
 			<i style="color:#969696"><br><span class=" glyphicon glyphicon-option-horizontal"></span><p style="font-family: helvetica;font-weight: bold;" class="tamaño"></p></i>
 		</button>-->
 
-			<p class="nombre-usuario">UserName</p>
+			<p class="nombre-usuario">
+				<?php
+
+                 echo $_SESSION["nombre_persona"];
+				?>
+			</p>
 
 			<p style=" margin: -40px 300px 0px 350px; color: grey; opacity: 0.7; font-size: 16px;"><b> seguidores &nbsp siguiendo</b></p>
 
-			<span><img src="img/perritu.jpg" width="190" height="190" class="redondo"></span>
+			<span><img 
+				<?php
+                         echo 'src="img/perflies/'.$_SESSION["url_foto_perfl"].'"';
+			          ?>
+			 width="190" height="190" class="redondo"></span>
 
 		<button class="boton-personalizado">Tableros</button>
 		<button class="boton-personalizado">Pines</button>

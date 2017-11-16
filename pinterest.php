@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,8 +31,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse" style="margin-right: 40px;">
           <ul class="nav navbar-nav  navbar-right">
-            <li class="btn btn-default" style="font-size: 20px; font-weight: bold;"><a href="pinterest.html" class="" type="button">Inicio</a></li>
-            <li class="btn btn-default" style="font-size: 20px; font-weight: bold;"><a href="perfilPinterest.html"><img src="img/Rose-shield2.png" height="25" width="25">Perfil</a></li>
+            <li class="btn btn-default" style="font-size: 20px; font-weight: bold;"><a href="pinterest.php" class="" type="button">Inicio</a></li>
+            <li class="btn btn-default" style="font-size: 20px; font-weight: bold;"><a href="perfilPinterest.php"><img src="img/Rose-shield2.png" height="25" width="25">Perfil</a></li>
 
             <li class="dropdown" ">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/categoriasreal.png"> <span class=""></span></a>
@@ -68,7 +72,7 @@
                 <li><a href="#">Cambiar a una cuenta para empresas</a></li>
                 <li><a href="#">Terminos y Privacidad</a></li>
                  <li role="separator" class="divider"></li>
-                <li><a href="#">Salir</a></li>
+                <li><a href="cerrarSesion.php">Salir</a></li>
               </ul>
               
             </li>
