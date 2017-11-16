@@ -48,6 +48,15 @@
 				echo '</table>';
 		}
 
+		public static function obtenerElementosEmpresa($conexion){
+          
+          $resultado = $conexion->ejecutarConsulta('SELECT tipo_empresa
+				FROM tipos_empresas');
+          while (($fila=$conexion->obtenerFila($resultado))) {
+          	echo '<option>'.$fila["tipo_empresa"].'</option>';
+          }
+		}
+
 		public static function detalleTipoEmpresa($conexion, $id_tipo_empresa){
 			$resultado = $conexion->ejecutarConsulta(
 				sprintf(

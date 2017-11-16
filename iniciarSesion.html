@@ -51,7 +51,7 @@
                             	method:"POST",
                             	success:function(resultado){
                             		if(resultado==1){
-                            		  window.location='pinterest.html';
+                            		  window.location='pinterest.php';
                                     }else if(resultado==0){
                                         window.location='login.html';
                                     }
@@ -87,7 +87,7 @@
 					</div>
                     
 					<div id="div-texto">
-                       <form action="ajax/validar.php" method="POST"> 
+                       <form> 
 						<div id="div-espacio">
 							
 							<input type="email" aria-label="Correo o número de teléfono" name="txt-correo" placeholder="Correo o número de teléfono" id="div-telefono-contrasena">
