@@ -5,10 +5,12 @@
    switch ($_GET["accion"]) {
    	case 'crear-usuario':
    		include ('../class/class-usuario.php');
+         $contrasena = sha1($_POST["txt-password"]);
+
          $usuario = new Usuario(null,
                                 $_POST["txt-nombre-completo"],
                               $_POST["txt-nombre-completo"],
-                              $_POST["txt-password"],
+                              $contrasena,
                               $_POST["txt-correo"],
                               null,
                               $_POST["txt-fecha"],
@@ -23,7 +25,8 @@
    		break;
    	case 'login':
    		include ('../class/class-usuario.php');
-   		Usuario::verificarUsuario($conexion,$_POST["txt-correo"],$_POST["txt-password"]);
+         $contrasena = sha1($_POST["txt-password"]);
+   		Usuario::verificarUsuario($conexion,$_POST["txt-correo"],$contrasena);
    		break;
    	default:
    		# code...
