@@ -1,16 +1,3 @@
-<?php  
-  session_start();
-  if(!(isset($_SESSION["nombre_persona"])))
-  {
-    header("location: paginaPrincipal.html");
-  }
-  else if ($_SESSION["ID_tipo_usuario"]!=1) {
-    header('location:pinterest.php');
-  }
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,7 +28,11 @@
                           	disabled="true"></td>
                         </tr>
                         <tr>
-                          <td colspan="2" align="right" style="padding-right: 20px;">
+                          <td>
+                            <a href="../usuarioAdministrador.php"><button type="button" id="btn-regresar" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span></button></a> &nbsp;
+                            <a href="../cerrarSesion.php"><button type="button" id="btn-CerrarSesion" class="btn btn-default">Cerrar Sesión</button></a>
+                          </td>
+                          <td align="right" style="padding-right: 20px;">
                           	<button type="button" id="btn-nuevo" class="btn btn-primary">Nuevo</button>
                           	<button type="button" id="btn-guardar" class="btn btn-primary" style="display: none;">Guardar</button>
                             <button type="button" id="btn-actualizar" class="btn btn-primary" style="display: none;">Actualizar</button>
