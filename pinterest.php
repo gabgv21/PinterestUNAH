@@ -86,6 +86,7 @@ session_start();
 		<div id="div-imagenes">
 			
 		</div>
+
 		<!--Parte del cuerpo de imagenes-->
 		<!--<div class="elemento">
 			<img src="img/404.jpg"  width="260" height="200" class="img-rounded">
@@ -277,6 +278,7 @@ session_start();
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/masonry.js"></script>
+	<script src="js/controladorPines.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
     <script src="js/ie10-viewport-bug-workaround.js"></script> ESTA PARTE DEL CODIGO DA ERROR NO ENCUETRA ESA RUTA-->
 </body>

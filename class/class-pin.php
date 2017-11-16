@@ -56,5 +56,19 @@
 				" Id_usuario: " . $this->id_usuario . 
 				" Id_tema_de_pin: " . $this->id_tema_de_pin;
 		}
+
+
+	public static function obtenerPin($conexion){
+			$resultado = $conexion->ejecutarConsulta('SELECT ID_pin, url_pin, fecha_publicacion, ID_usuario, ID_tema_de_pin FROM pines');
+
+			echo "<div class='col-md-2'>";
+			while(($fila=$conexion->obtenerFila($resultado))){
+			
+    		echo "<div class='thumbnail'>";
+			echo "<img src=".$fila['url_pin'].">";
+			echo "</div>";
+		}echo "</div>";
+		}
 	}
-?>
+//NI LA PUTA IDEA DE COMO PONER ESA SHIT EN COLUMNAS DE 5
+    	?>
