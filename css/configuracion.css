@@ -1,3 +1,108 @@
+.contenedor{
+font-family: helvetica;
+font-size: 1.8rem;
+margin: 10px 10px 10px 300px;
+}
+
+.texto-izquierda2{
+  color: #B8B8B8;
+  font-weight: bolder;
+}
+
+.texto-derecha{
+  margin: -270px 0px 0px 200px;
+}
+.texto-derecha2{
+  font-family: Helvetica;
+  font-size: 14px;
+
+}
+
+.texto-derecha3{
+  margin: 30px 0px 0px 200px;
+}
+
+.texto-derecha4{
+  margin: 40px 0px 0px 200px;
+}
+.texto-derecha5{
+  margin: 50px 0px 0px 200px;
+}
+.texto-derecha6{
+  margin: 60px 0px 0px 200px;
+}
+.texto-derecha7{
+  margin: 70px 0px 0px 200px;
+}
+.texto-derecha8{
+  margin: 80px 0px 0px 200px;
+}
+
+#feed-inicio{
+  color: #555555;
+  font-size: 3.75rem;
+  letter-spacing:-2px;
+  word-spacing: -1.5px;
+  font-weight: bolder;
+}
+
+
+#aspectos-basicos{
+  color: #555555;
+  font-size: 3.75rem;
+  letter-spacing:-2px;
+  word-spacing: -1.5px;
+  font-weight: bolder;
+
+}
+
+#perfil{
+  color: #555555;
+  font-size: 3.75rem;
+  letter-spacing:-2px;
+  word-spacing: -1.5px;
+  font-weight: bolder;
+
+}
+
+#notificaciones{
+  color: #555555;
+  font-size: 3.75rem;
+  letter-spacing:-2px;
+  word-spacing: -1.5px;
+    font-weight: bolder;
+}
+
+#redes-sociales{
+  color: #555555;
+  font-size: 3.75rem;
+  letter-spacing:-2px;
+  word-spacing: -1.5px;
+    font-weight: bolder;
+}
+#apps{
+  color: #555555;
+  font-size: 3.75rem;
+  letter-spacing:-2px;
+  word-spacing: -1.5px;
+    font-weight: bolder;
+}
+#seguridad{
+  color: #555555;
+  font-size: 3.75rem;
+  letter-spacing:-2px;
+  word-spacing: -1.5px;
+    font-weight: bolder;
+}
+
+.color-text{
+  background-color: #EFEFEF;
+  font-weight: bold;
+}
+.botones{
+  font-weight: bold;
+}
+
 .input[type=text] {
 		    width: 850px;
 		    height: 40px;
@@ -19,14 +124,7 @@
 		    transition: width 0.4s ease-in-out;
 
 }
-.margenes{
 
-	margin:0px 20px 0px 30px;
-}
-
-.margen{
-	margin:0px 30px 0px 0px; 
-}
 
 .btn-default{
 	 background-color: #fff;
@@ -46,9 +144,7 @@ body{
 	background: #fff;
 }
 
-.contenedor{
-	width: 80%;
-	margin: 15px auto;
+
 }
 
 .elemento{
@@ -74,29 +170,8 @@ body{
     font-size: 30px;
 }
 
-.nombre-usuario{
-	letter-spacing: -1.25px;
-    line-height: 42px;
-    word-spacing: -2.25px;
-    font-size: 50px; 
-    font-family: Helvetica;
-     font-weight: bolder
-}
 
-.aspectos{
-	gb(85, 85, 85);
-	display: block;
-	font-family: Helvetica;
-	font-size: 16px;
-    font-style: normal;
-    font-weight :normal;
-	height: 18px;
-	hyphens: manual;
-	letter-spacing: -0.2px;
-	line-height: 18px;
-	text-align: left;
-	text-size-adjust: 100%;
-}
+
 .btn-busquedas{
 	letter-spacing: -.2px;
     line-height: 18px;
@@ -106,16 +181,12 @@ body{
     font-weight: 700;
     color: #555;
     text-align: center;
-    font-style: bold;
+    font-style: normal;
 
-}
-.letraNormal{
-	font-style: normal;
 }
 
 .redondo{
-margin: 0;
-padding: 0;
+
 border-radius: 600px;
 overflow: hidden;
 margin: -40px 440px;
@@ -143,7 +214,6 @@ margin: -40px 440px;
   	    background-color: #efefef;
   	    cursor: pointer;
         border-radius: 4px;
-        color: #555
   }
 
  .buscador{
@@ -176,8 +246,3 @@ margin: -40px 440px;
   padding: 0;
   text-overflow: ellipsis;
   width: 100%; }
-
-  .seleccionar{
-    
- 
-}
