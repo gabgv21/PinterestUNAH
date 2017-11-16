@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!(isset($_SESSION["nombre_usuario"])))
+   {
+   	 header('location: paginaPrincipal.html');
+   }
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +30,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>-->
-          <a class="navbar-brand" href="pinterest.html"><img src="img/logo.png" height="38" width="38" style="margin-left: 15px;"></a>
+          <a class="navbar-brand" href="pinterest.php"><img src="img/logo.png" height="38" width="38" style="margin-left: 15px;"></a>
           <input type="text" name="search" id=search placeholder="Buscar" style="font-weight: bold; width: 750px;" class="input" >
         </div>
         <div id="navbar" class="navbar-collapse collapse" style="margin-right: 40px;">

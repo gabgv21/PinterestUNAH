@@ -310,6 +310,43 @@ $("#div-btnSesion").click(function(){
       }
 });
 
+
+
+$("#enviar").click(function(){
+    if(($("#correo").val())&&($("#password").val()))
+     { var parametros = "txt-correo="+$("#correo").val()+"&"+"txt-password="+$("#password").val();
+
+       $.ajax({
+        url:"ajax/gestion-usuario.php?accion=login",
+        data: parametros,
+        method:"POST",
+        dataType:'json',
+        success:function(respuesta){
+         if(respuesta.estatus==1)
+         {
+          window.location = "pinterest.php";
+         }
+         else
+           {
+            $("#div-usuario-incorrecto").html("usuario incorrecto");
+           }
+        },
+        error:function(e){
+          console.log(e);
+        }
+
+       });
+      }
+      else{
+        $("#div-usuario-incorrecto").html("Olvido llenar algun dato");
+      }
+
+
+});
+
+
+
+
 $(document).ready(function(){
 $.ajax({
  url:"ajax/getInfo.php?accion=obtener-elementos-empresa",
