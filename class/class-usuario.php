@@ -216,6 +216,27 @@
 		    echo json_encode($respuesta);
 
 		}
+
+
+		public function registrarUsuario($conexion){
+			$sql = sprintf("INSERT INTO usuarios(nombre_usuario, nombre_persona, contrasenna, email, telefono, fecha_nacimiento, url_foto_perfl, ultima_conexion, seguidores, siguiendo, ID_genero, ID_tipo_usuario) VALUES('%s','%s','%s',%s,'%s','%s',%s,'%s',%s,%s,%s,%s)",
+				$conexion->antiInyeccion($this->nombre_usuario),
+				$conexion->antiInyeccion($this->nombre_persona),
+				$conexion->antiInyeccion("fb"),
+				$conexion->antiInyeccion($this->email),
+				$conexion->antiInyeccion("99999999"),
+				$conexion->antiInyeccion("2017-10-10"),
+				$conexion->antiInyeccion($this->url_foto_perfil),
+				$conexion->antiInyeccion("2017-10-10"),
+				$conexion->antiInyeccion("100"),
+				$conexion->antiInyeccion("50"),
+				$conexion->antiInyeccion($this->genero),
+				$conexion->antiInyeccion("3")
+		);
+			$resultado = $conexion->ejecutarconsulta($sql);
+	
+		}
+
 	}
 ?>
 
