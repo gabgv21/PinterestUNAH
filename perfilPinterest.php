@@ -1,13 +1,9 @@
 <?php
 session_start();
-<<<<<<< HEAD
 if(!(isset($_SESSION["nombre_persona"])))
    {
    	 header('location: paginaPrincipal.html');
    }
-
-=======
->>>>>>> 92619524111a7b9fe9ff2b5ce3104ff7a411af1b
 ?>
 <!DOCTYPE html>
 <html>

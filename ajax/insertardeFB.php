@@ -1,4 +1,5 @@
 <?php 
+   session_start();
 	include("../class/class-conexion.php");
 	$conexion = new Conexion(); 
 	switch ($_GET["accion"]){
