@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!(isset($_SESSION["nombre_usuario"])))
+if(!(isset($_SESSION["nombre_persona"])))
    {
    	 header('location: paginaPrincipal.html');
    }
