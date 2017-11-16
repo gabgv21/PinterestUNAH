@@ -292,7 +292,7 @@ $("#div-btnSesion").click(function(){
         success:function(respuesta){
          if(respuesta.estatus==1)
          {
-          if(respuesta.ID_tipo_usuario == 4)
+          if((respuesta.ID_tipo_usuario == 4)||(respuesta.ID_tipo_usuario==3)||(ID_tipo_usuario==2))
             {
               window.location = "pinterest.php";
             }
@@ -330,7 +330,7 @@ $("#enviar").click(function(){
         success:function(respuesta){
          if(respuesta.estatus==1)
          {
-          if(respuesta.ID_tipo_usuario == 4)
+          if((respuesta.ID_tipo_usuario == 4)||(respuesta.ID_tipo_usuario==3)||(ID_tipo_usuario==2))
             {
               window.location = "pinterest.php";
             }
