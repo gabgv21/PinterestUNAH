@@ -49,7 +49,11 @@
 		case 'obtenerTipoNotificacion':
 			include("../class/class-tipo-notificacion.php");
 			TipoNotificacion::detalleTipoNotificacion($conexion, $_POST["id_tipo_notificacion"]);
-			break;				
+			break;
+		case 'obtener-elementos-empresa':
+						include ('../class/class-tipo-empresa.php');
+						TipoEmpresa::obtenerElementosEmpresa($conexion);
+						break;		
 		default:
 			echo "Acción inválida";
 			break;

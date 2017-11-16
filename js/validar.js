@@ -1,5 +1,7 @@
-var  password, correo;
+
 /*validacion*/
+/*
+var  password, correo;
 $("#enviar").click(function(){
 	// Password
 	password = $("#password").val(); 
@@ -20,7 +22,7 @@ $("#enviar").click(function(){
 	}
 
 
-	/*validacion*/
+	/*validacion
 	if (password != "" && correo != "") {
 		window.location = 'pinterest.html';
 		var parametro = "correo="+correo+"&password="+password;

@@ -1,5 +1,9 @@
 <?php
 session_start();
+if(!(isset($_SESSION["nombre_usuario"])))
+   {
+   	 header('location: paginaPrincipal.html');
+   }
 
 ?>
 <!DOCTYPE html>
@@ -26,7 +30,7 @@ session_start();
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>-->
-          <a class="navbar-brand" href="pinterest.html"><img src="img/logo.png" height="38" width="38" style="margin-left: 15px;"></a>
+          <a class="navbar-brand" href="pinterest.php"><img src="img/logo.png" height="38" width="38" style="margin-left: 15px;"></a>
           <input type="text" name="search" id=search placeholder="Buscar" style="font-weight: bold; width: 750px;" class="input" >
         </div>
         <div id="navbar" class="navbar-collapse collapse" style="margin-right: 40px;">
@@ -86,6 +90,7 @@ session_start();
 		<div id="div-imagenes">
 			
 		</div>
+
 		<!--Parte del cuerpo de imagenes-->
 		<!--<div class="elemento">
 			<img src="img/404.jpg"  width="260" height="200" class="img-rounded">
@@ -277,6 +282,7 @@ session_start();
     <script src="js/bootstrap.min.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/masonry.js"></script>
+	<script src="js/controladorPines.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
     <script src="js/ie10-viewport-bug-workaround.js"></script> ESTA PARTE DEL CODIGO DA ERROR NO ENCUETRA ESA RUTA-->
 </body>

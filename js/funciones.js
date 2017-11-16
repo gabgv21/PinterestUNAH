@@ -172,20 +172,36 @@ function guardarRegistro(){
              if($("#slc-tipoEmpresa").val())
              {
                  $("#slc-tipoEmpresa").css("background-color", "#eee"); 
+  
+                           if($("#txt-correo").val()&&$("#txt-password").val())
+                             {
+                                  var parametros = "txt-correo="+$("#txt-correo").val()+"&"+"txt-password="+$("#txt-password").val();
 
-                      if($("#txt-web").val())
-                        {
+                            $.ajax({
+                                  url:"ajax/gestion-usuario.php?accion=login",
+                                  data: parametros,
+                                  method:"POST",
+                                  dataType:'json',
+                                  success:function(respuesta){
+                                   if(respuesta.estatus==1)
+                                   {
+                                    window.location = "pinterest.php";
+                                   }
+                                   else
+                                     {
+                                     console.log("usuario incorrecto");
+                                     }
+                                  },
+                                  error:function(e){
+                                    console.log(e);
+                                  }
 
-                          $("#txt-web").css("background-color", "#eee");  
-                           window.location = 'pinterest.html';
+                                 });
+                          }else{
+                          alert("llene los campos");
+                          }
 
-                        }
-
-                        else{
-
-                              $("#txt-web").css("background-color", "red");
-
-                            }
+                          
              }
 
             else{
@@ -294,3 +310,57 @@ $("#div-btnSesion").click(function(){
       }
 });
 
+
+
+$("#enviar").click(function(){
+    if(($("#correo").val())&&($("#password").val()))
+     { var parametros = "txt-correo="+$("#correo").val()+"&"+"txt-password="+$("#password").val();
+
+       $.ajax({
+        url:"ajax/gestion-usuario.php?accion=login",
+        data: parametros,
+        method:"POST",
+        dataType:'json',
+        success:function(respuesta){
+         if(respuesta.estatus==1)
+         {
+          window.location = "pinterest.php";
+         }
+         else
+           {
+            $("#div-usuario-incorrecto").html("usuario incorrecto");
+           }
+        },
+        error:function(e){
+          console.log(e);
+        }
+
+       });
+      }
+      else{
+        $("#div-usuario-incorrecto").html("Olvido llenar algun dato");
+      }
+
+
+});
+
+
+
+
+$(document).ready(function(){
+$.ajax({
+ url:"ajax/getInfo.php?accion=obtener-elementos-empresa",
+        data:"",
+        method:"POST",
+        success:function(respuesta){
+
+          $("#slc-tipoEmpresa").html(respuesta);
+        },
+        error:function(e){
+
+           console.log(e);
+        }
+
+ });
+
+});
