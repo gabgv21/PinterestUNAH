@@ -149,6 +149,7 @@
 				echo "1";
 				$fila=$conexion->obtenerFila($resultado);
 				$_SESSION["nombre_persona"] = $fila["nombre_persona"];
+				$_SESSION["url_foto_perfil"] = "foto_default.png";
 			}else{
 				echo "0";
 			}
@@ -239,6 +240,8 @@
 		);
 			$resultado = $conexion->ejecutarconsulta($sql);
 			$_SESSION["nombre_persona"] = $this->nombre_usuario;
+			 $_SESSION["url_foto_perfl"] = "foto_default.png";
+
 
 		}
 

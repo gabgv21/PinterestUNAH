@@ -41,7 +41,7 @@
                     if(response.status == 'connected') {  
                             FB.api('/me?fields=id,name,gender,email,locale,age_range,link,updated_time, picture', function(response) {  
 
-                            var parametros='Email='+response.email;
+                            var parametros='nombreP='+response.name+'&Email='+response.email;
                             //alert(parametros);
                             $.ajax({
                             	url:"ajax/gestionfb.php?accion=consultar",
