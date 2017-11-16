@@ -2,7 +2,7 @@
 	include("../class/class-conexion.php");
 	$conexion = new Conexion(); 
 	switch ($_GET["accion"]){
-		case "registrar":
+		case 'registro':
 			include("../class/class-usuario.php");
 			$usuario = new Usuario(null,
 					$_POST["nombreU"],
@@ -16,7 +16,7 @@
 					null,
 					null,
 					$_POST["genero"],
-					null,);
+					null);
 			$usuario->registrarUsuario($conexion);
 			break;	
 

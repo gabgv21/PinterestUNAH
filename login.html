@@ -39,7 +39,7 @@
         function validarUsuario() {  
                 FB.getLoginStatus(function(response) {  
                     if(response.status == 'connected') {  
-                        FB.api('/me?fields=id,name,gender,email,locale,age_range,link,updated_time, picture', function(response) {  
+                        FB.api('/me?fields=id,first_name,name,gender,email,locale,age_range,link,updated_time, picture', function(response) {  
                         	    var Genero = 0;
                             if(response.gender= "male"){
                             	Genero = 1;
@@ -51,15 +51,16 @@
                            	var parametros = 'Email='+response.email+'&nombreU='+response.first_name+'&nombreP='+response.name+'&url_imagen='+response.picture.data.url+ '&genero='+Genero;
                            	alert(parametros);
                            	 $.ajax({
-                            	url:"ajax/insertardeFB.php?accion=registrar",
+                            	url:"ajax/insertardeFB.php?accion=registro",
                             	data:parametros,
                             	method:"POST",
                             	success:function(resultado){
-                            		if(resultado==1){
+                            		alert(resultado);
+                            		/*if(resultado==1){
                             		  window.location='pinterest.html';
                                     }else if(resultado==0){
                                         alert("Ocurrio un error porfavor intentelo de nuevo");
-                                    }
+                                    }*/
                             	}
                             });
                          })

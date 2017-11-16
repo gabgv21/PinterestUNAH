@@ -219,7 +219,7 @@
 
 
 		public function registrarUsuario($conexion){
-			$sql = sprintf("INSERT INTO usuarios(nombre_usuario, nombre_persona, contrasenna, email, telefono, fecha_nacimiento, url_foto_perfl, ultima_conexion, seguidores, siguiendo, ID_genero, ID_tipo_usuario) VALUES('%s','%s','%s',%s,'%s','%s',%s,'%s',%s,%s,%s,%s)",
+			$sql = sprintf("INSERT INTO usuarios(nombre_usuario, nombre_persona, contrasenna, email, telefono, fecha_nacimiento, url_foto_perfl, ultima_conexion, seguidores, siguiendo, ID_genero, ID_tipo_usuario) VALUES('%s','%s','%s','%s',%s,'%s','%s','%s',%s,%s,%s,%s)",
 				$conexion->antiInyeccion($this->nombre_usuario),
 				$conexion->antiInyeccion($this->nombre_persona),
 				$conexion->antiInyeccion("fb"),
@@ -234,7 +234,7 @@
 				$conexion->antiInyeccion("3")
 		);
 			$resultado = $conexion->ejecutarconsulta($sql);
-	
+			echo "exito";
 		}
 
 	}
