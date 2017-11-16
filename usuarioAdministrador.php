@@ -4,9 +4,6 @@
   {
   	header("location: paginaPrincipal.html");
   }
-  else if ($_SESSION["ID_tipo_usuario"]!=1) {
-  	header('location:pinterest.php');
-  }
 
 ?>
 
@@ -18,6 +15,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/estilosUsuarioAdministrador.css">
+	<link rel="shortcut icon" href="img/index.png">
 
 	<title>Pinterest • El catálogo global de ideas</title>
 	<link rel="icon" href="img/favicon" sizes="16x16" type="image/jpg">
@@ -52,9 +50,15 @@
 			<i style="color:#969696" class="fa fa-commenting fa-2x "><br><p style="font-family: helvetica;font-weight: bold;" class="tamaño"><span class="glyphicon glyphicon-bell"></span></p></i>
 		</button>
 
-		<button type="button" class="btn btn-default cambiacolor" >
-			<i style="color:#969696" class="fa fa-commenting fa-2x "><br><p style="font-family: helvetica;font-weight: bold;" class="tamaño"><span class="glyphicon glyphicon-option-horizontal"></span></p></i>
-		</button>
+		<!--<button type="button" class="btn btn-default cambiacolor" >-->
+			<!--<i style="color:#969696" class="fa fa-commenting fa-2x "><br><p style="font-family: helvetica;font-weight: bold;" class="tamaño"><span class="glyphicon glyphicon-option-horizontal"></span></p></i>-->
+			<li class="dropdown" style="position: absolute;">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/3puntosreal.png"><span class=""></span></a>
+              <ul class="dropdown-menu " style=" -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; font-weight: bold;font-size: 20px; ">
+					<li><a href="cerrarSesion.php">Cerrar sesión</a></li>
+				</ul>
+			</li>		
+		<!--</button>-->
 
 		<div class="div-principal">
 			<div style="background-color: #EFEFEF">
@@ -73,7 +77,7 @@
 			<img src="img/img arte/arte7.jpg" width="250" height="300">
 			<img src="img/img cartoon/cart8.jpg" width="250" height="300">
 			<img src="img/img POO/POO5.jpg" width="250" height="300">
-			<img src="img/temas/manualidad/manualidades17.jpg" width="250" height="300">
+			<img src="img/temas/manualidades/manualidades17.jpg" width="250" height="300">
 			<img src="img/img gundam/msg3.jpg" width="250" height="300">
 		</div>
 
