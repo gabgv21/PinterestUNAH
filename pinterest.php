@@ -73,12 +73,12 @@ if(!(isset($_SESSION["nombre_persona"])))
             <li class="dropdown " >
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="img/3puntosreal.png"><span class=""></span></a>
                <ul class="dropdown-menu " style=" -moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px; font-weight: bold;font-size: 20px; ">
-                <li><a href="#">Configuracion</a></li>
+                <li><a href="configuracionCuenta.php">Configuracion</a></li>
                
                 <li role="separator" class="divider"></li>
 
                 <li><a href="#">Centro de Asistencia</a></li>
-                <li><a href="#">Cambiar a una cuenta para empresas</a></li>
+                <li><a href="iniciarSesionEmpresa.html">Cambiar a una cuenta para empresas</a></li>
                 <li><a href="politicas.html">Terminos y Privacidad</a></li>
                  <li role="separator" class="divider"></li>
                 <li><a href="cerrarSesion.php">Salir</a></li>
