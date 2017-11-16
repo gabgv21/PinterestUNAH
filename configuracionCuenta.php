@@ -64,24 +64,25 @@
 						<input type="TEXT" name="" class="input">
 						<p >Contraseña</p>
 
-						<input type="TEXT" name="" class="input" value="Cambiar tu Contraseña">
+						<button class="boton"><div class="btn-busquedas">Cambiar contraseña...</div></button>
 						<p>Idioma</p>
-						<select class="input">
+						<select class="btn-busquedas" style="background-color: #f4f2f2">
 							<option >Español (Américas)</option>
 							<option >Español (España)</option>
 							<option >Caliche x) </option>
 						</select>
 						<p>Género</p>
-						<label><input type="radio" name="">Hombre</label>
-						<label><input type="radio" name="">Mujer</label>
-						<label><input type="radio" name="">Personalizado</label>
+						<div><input type="radio" name="">Hombre
+						<input type="radio" name="">Mujer
+						<input type="radio" name="">Personalizado
+						</div>
 						<p>Privacidad de búsqueda</p>
-						<label><input type="checkbox" name="" value="on">Ocultar tu perfil de los motores de búsqueda (p. ej. google).</label>
+						<div><input type="checkbox" name="" value="on">Ocultar tu perfil de los motores de búsqueda (p. ej. google).</div>
 						<p>Personalización</p>
-						<label><input type="checkbox" name="">Usa los sitios que visitas para mejorar las recomendaciones y anuncion que se mostrarán <a href="">Más información</a></label>
-						<label><input type="checkbox" name="">Utiliza la información de nuestros socios para mejorar las recomendadiones y los anuncios que se te mostrarán <a href="">Más información</a></label>
+						<div><input type="checkbox" name="">Usa los sitios que visitas para mejorar las recomendaciones y anuncion que se mostrarán <a href="">Más información</a></div>
+						<div><input type="checkbox" name="">Utiliza la información de nuestros socios para mejorar las recomendadiones y los anuncios que se te mostrarán <a href="">Más información</a></div>
 						<p>Historial de búsqueda</p>
-						<button class="boton"><div class="btn-busquedas">Borrar Busquedas recientes</div></button>
+						<button class="boton"><div class="btn-busquedas">Borrar busquedas recientes</div></button>
 						<p>Cuenta</p>
 						<button class="boton"><div class="btn-busquedas">Desactivar cuenta</div></button>
 						<h2>Perfil</h2>
@@ -91,8 +92,8 @@
 								<td>Apellido</td>
 							</tr>
 							<tr>
-								<td><input type="text" name="" class="btn-default form-control" value="Trunks"></td>
-								<td><input type="text" name="" class="btn-default form-control" value="Sayajin"></td>
+								<td><input type="text" name="" class="" ></td>
+								<td><input type="text" name="" class="" ></td>
 							</tr>
 						</table>
 						<p>Foto</p>
@@ -103,9 +104,9 @@
 						<p>Acerca de ti</p>
 						<textarea class="btn btn-default cambiacolor"></textarea>
 						<p>Ubicación</p>
-						<input type="text" name="">
+						<input type="text" name="" class="input">
 						<p>Sitio web</p>
-						<input type="text" name="">
+						<input type="text" name="" >
 						<button class="boton"><div class="btn-busquedas">Confirmar sitio web</div></button>
 						<h2>Notificaciones</h2>
 						<p>Siempre te informaremos sobre los cambios importantes, pero tú debes elegir sobre qué más quieres saber</p>
