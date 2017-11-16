@@ -92,8 +92,8 @@
 								<td>Apellido</td>
 							</tr>
 							<tr>
-								<td><input type="text" name="" class="" ></td>
-								<td><input type="text" name="" class="" ></td>
+								<td><input type="text" name="" class="input" style="width: 300px"></td>
+								<td><input type="text" name="" class="input" style="width: 300px" ></td>
 							</tr>
 						</table>
 						<p>Foto</p>
@@ -102,8 +102,8 @@
 						<span>www.pinterest.com/</span> 
 						<input type="text" name="" value="TrunksFutureWarrior" class="btn-default btn-default">
 						<p>Acerca de ti</p>
-						<textarea class="btn btn-default cambiacolor"></textarea>
-						<p>Ubicación</p>
+						<textarea class="input"></textarea>
+						<p class="input">Ubicación</p>
 						<input type="text" name="" class="input">
 						<p>Sitio web</p>
 						<input type="text" name="" >
