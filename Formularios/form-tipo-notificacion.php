@@ -1,3 +1,15 @@
+<?php  
+  session_start();
+  if(!(isset($_SESSION["nombre_persona"])))
+  {
+    header("location: paginaPrincipal.html");
+  }
+  else if ($_SESSION["ID_tipo_usuario"]!=1) {
+    header('location:pinterest.php');
+  }
+
+?>
+
 <html>
 <head>
 	<meta charset="utf-8">
