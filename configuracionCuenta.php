@@ -97,7 +97,7 @@
 							</tr>
 						</table>
 						<p>Foto</p>
-						<div style="height: 40px; width: 40px; padding-right: 10px;"></div><img src="img/trunks.jpg" alt="" class="img-responsive img-circle" ><input type="button" name="" class="btn btn-default cambiacolor" value="Cambiar Imagen">
+						<div style="height: 40px; width: 40px; padding-right: 10px;"></div><img src="img/trunks.jpg" alt="" class="img-responsive img-circle" ><button class="boton"><div class="btn-busquedas">Cambiar imagen</div></button>
 						<p>Nombre de usuario</p>
 						<span>www.pinterest.com/</span> 
 						<input type="text" name="" value="TrunksFutureWarrior" class="btn-default btn-default">
