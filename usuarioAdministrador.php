@@ -4,6 +4,9 @@
   {
   	header("location: paginaPrincipal.html");
   }
+  else if ($_SESSION["ID_tipo_usuario"]!=1) {
+    header('location:pinterest.php');
+  }
 
 ?>
 
