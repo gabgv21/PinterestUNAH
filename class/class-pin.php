@@ -75,11 +75,4 @@
 		}
 		}
 	}
-/*NI LA PUTA IDEA DE COMO PONER ESA SHIT EN COLUMNAS DE 5
-echo "<div class='col-lg-6'>";
-    		echo "<img src=".$fila['url_pin']." class='img-responsive>";
-			echo "</div>";
-		}
-		echo "</div>";
-		*/
     	?>
