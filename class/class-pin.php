@@ -63,7 +63,7 @@
 			echo '<div class="contenedor">';
 			while(($fila=$conexion->obtenerFila($resultado))){
     						echo '<div class="elemento">';
-    						echo "<img src =".$fila['url_pin']." width='260' height='300' class='img-rounded'> <br>";
+    						echo "<a rel='button'><img src =".$fila['url_pin']." width='260' height='500' class='img-rounded'></a>";
     					for ($i=1; $i <= 4; $i++) { 
     						
     						

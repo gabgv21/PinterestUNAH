@@ -138,14 +138,17 @@
 				" tipo_usuario: " . $this->tipo_usuario;
 		}
 
-		public static function consultar($conexion,$email){
-			$sql= sprintf("SELECT  email  FROM usuarios WHERE email='%s'",
+		public static function consultar($conexion,$nombreU,$email){
+			$sql= sprintf("SELECT nombre_usuario ,email  FROM usuarios WHERE nombre_usuario='%s' AND email='%s'",
+				$nombreU,
 				$email
 			);
 			$resultado = $conexion->ejecutarconsulta($sql);
 			$cantidadRegistros=$conexion->cantidadRegistros($resultado);
 			if($cantidadRegistros==1){
 				echo "1";
+				$fila=$conexion->obtenerFila($resultado);
+				$_SESSION["nombre_usuario"] = $fila["nombre_usuario"];
 			}else{
 				echo "0";
 			}
@@ -234,6 +237,7 @@
 				$conexion->antiInyeccion("3")
 		);
 			$resultado = $conexion->ejecutarconsulta($sql);
+			$_SESSION["nombre_usuario"] = $this->nombre_usuario;
 
 		}
 
