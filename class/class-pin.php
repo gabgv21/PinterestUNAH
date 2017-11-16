@@ -60,11 +60,10 @@
 
 	public static function obtenerPin($conexion){
 			$resultado = $conexion->ejecutarConsulta('SELECT ID_pin, url_pin, fecha_publicacion, ID_usuario, ID_tema_de_pin FROM pines');
-			echo '<div class="container">
-  				<div class="row">';
+			echo '<div class="contenedor">';
 			while(($fila=$conexion->obtenerFila($resultado))){
-    						echo '<div class="col-lg-3 col-sm-6 col-md-4 col-xs-12">';
-    						echo "<img src =".$fila['url_pin']." class='img-responsive'> <br>";
+    						echo '<div class="elemento">';
+    						echo "<img src =".$fila['url_pin']." width='260' height='300' class='img-rounded'> <br>";
     					for ($i=1; $i <= 4; $i++) { 
     						
     						

@@ -11,4 +11,11 @@ $(document).ready(function(){
 			alert("Error "+e);
 		}
 	});
+
+	$('.contenedor').masonry({
+  // options
+  	itemSelector: '.elemento',
+  	columnWidth: 100
+	});
+
 });

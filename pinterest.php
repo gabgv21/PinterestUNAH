@@ -17,7 +17,12 @@ if(!(isset($_SESSION["nombre_usuario"])))
 		<title>Pinterest</title>
 	<link rel="icon" href="img/favicon-pinterest.png">
 
-    <link rel="icon" href="img/logo.png" sizes="16x16" type="image/jpg">	
+    <link rel="icon" href="img/logo.png" sizes="16x16" type="image/jpg">
+     <script src="js/jquery-3.2.1.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+   
+	<script src="js/controladorPines.js"></script>
+	<script src="js/masonry.js"></script>	
 </head>
 
 <body>
@@ -87,7 +92,7 @@ if(!(isset($_SESSION["nombre_usuario"])))
     </nav>
 	<!--<i class="fa fa-camera-retro"></i> fa-camera-retro-->
 	<div  class="contenedor" style="margin-top: 100px;">
-		<div id="div-imagenes" style="">
+		<div id="div-imagenes" style=" margin-left: 75px;">
 			
 		</div>
 
@@ -268,21 +273,11 @@ if(!(isset($_SESSION["nombre_usuario"])))
 
 		}
 
-	</script>
-
-	<script>
-			var container = document.querySelector('.contenedor');
-			var msnry = new Masonry( container, {
-			  // options
-			  itemSelector: '.elemento'
-			});
 	</script>-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery-3.2.1.min.js"></script>
-	<script src="js/masonry.js"></script>
-	<script src="js/controladorPines.js"></script>
+
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>-->
+    
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
     <script src="js/ie10-viewport-bug-workaround.js"></script> ESTA PARTE DEL CODIGO DA ERROR NO ENCUETRA ESA RUTA-->
 </body>

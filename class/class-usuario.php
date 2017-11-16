@@ -234,7 +234,7 @@
 				$conexion->antiInyeccion("3")
 		);
 			$resultado = $conexion->ejecutarconsulta($sql);
-			echo "exito";
+
 		}
 
 	}
