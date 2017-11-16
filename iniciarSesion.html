@@ -41,9 +41,9 @@
         function validarUsuario() {  
                 FB.getLoginStatus(function(response) {  
                     if(response.status == 'connected') {  
-                        FB.api('/me?fields=id,name,gender,email,locale,age_range,link,updated_time, picture', function(response) {  
+                        FB.api('/me?fields=id,first_name,name,gender,email,locale,age_range,link,updated_time, picture', function(response) {  
 
-                            var parametros='Email='+response.email;
+                            var parametros='nombreU='+response.first_name+'Email='+response.email;
                             //alert(parametros);
                             $.ajax({
                             	url:"ajax/gestionfb.php?accion=consultar",

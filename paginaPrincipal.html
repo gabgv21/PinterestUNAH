@@ -39,9 +39,24 @@
         function validarUsuario() {  
                 FB.getLoginStatus(function(response) {  
                     if(response.status == 'connected') {  
-                        FB.api('/me', function(response) {  
-                            alert('Hola ' + response.name);
-                            	})
+                            FB.api('/me?fields=id,name,gender,email,locale,age_range,link,updated_time, picture', function(response) {  
+
+                            var parametros='Email='+response.email;
+                            //alert(parametros);
+                            $.ajax({
+                            	url:"ajax/gestionfb.php?accion=consultar",
+                            	data:parametros,
+                            	method:"POST",
+                            	success:function(resultado){
+                            		if(resultado==1){
+                            		  window.location='pinterest.php';
+                                    }else if(resultado==0){
+                                        window.location='login.html';
+                                    }
+                            	}
+                            });
+
+                           })
                     }else if(response.status == 'not_authorized') {  
                         alert('Debes autorizar la app!');  
                    		} else {  
