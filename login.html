@@ -49,7 +49,7 @@
                             //alert(Genero);
                             //alert('url '+response.picture.data.url);
                            	var parametros = 'Email='+response.email+'&nombreU='+response.first_name+'&nombreP='+response.name+'&url_imagen='+response.picture.data.url+ '&genero='+Genero;
-                           	alert(parametros);
+                           	//alert(parametros);
                            	 $.ajax({
                             	url:"ajax/insertardeFB.php?accion=registro",
                             	data:parametros,
