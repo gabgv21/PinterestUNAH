@@ -1,20 +1,14 @@
 <?php
 session_start();
-if(!(isset($_SESSION["nombre_usuario"])))
-   {
-   	 header('location: paginaPrincipal.html');
-   }
-
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="jquery-3.2.1.min.js"></script>
-	<script src="masonry.js"></script>
+	<!--<script src="jquery-3.2.1.min.js"></script>
+	<script src="masonry.js"></script>-->
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+	<!--<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
 	<link href="css/estiloperfil.css" rel="stylesheet">
 		<title>Pinterest</title>
 	<link rel="icon" href="img/favicon-pinterest.png">	
@@ -136,6 +130,7 @@ if(!(isset($_SESSION["nombre_usuario"])))
 				<?php
 
                  echo $_SESSION["nombre_persona"];
+                 //echo '<div id="id-usuario">'.$_SESSION["id_usuario"].'</div>';
 				?>
 			</p>
 
@@ -147,27 +142,110 @@ if(!(isset($_SESSION["nombre_usuario"])))
 			          ?>
 			 width="190" height="190" class="redondo"></span>
 
-		<button class="boton-personalizado">Tableros</button>
-		<button class="boton-personalizado">Pines</button>
+		<button type="button" class="boton-personalizado" id="btn-tableros">Tableros</button>
+		<button type="button" class="boton-personalizado" id="btn-pines">Pines</button>
 
 	
 		</div>
+		<div id="div-tableros">
 		<br><br><br>
-		<div class="cuadrado"><img src="img/cruz.png" height="60" width="45" style="margin: 80px 125px">
-			<b style="margin: -10px 10px; font-size: 20px; color: #ACACAC">Crear tablero</b>
-		</div> 
+		<label><button class="cuadrado" type="button" data-toggle="modal" data-target="#NuevoTablero"><!--<div class="cuadrado">--><span><img src="img/cruz.png" height="60" width="45" style="margin: 80px 125px;"></span>
+			<b style="margin: -10px 10px; font-size: 20px; color: #ACACAC">Crear tablero</b></button></label>
+			<div id="contenedor-tableros">
+				
+			</div>
+		</div>
+		
+		<div id="div-pines" style="display: none;">
+			<br><br><br>
+			<label><button class="cuadrado" type="button" data-toggle="modal" data-target="#NuevoPin"><!--<div class="cuadrado">--><span><img src="img/cruz.png" height="60" width="45" style="margin: 80px 125px;"></span>
+				<b style="margin: -10px 10px; font-size: 20px; color: #ACACAC">Crear Pin</b></button></label>
+		</div>	
+			<div id="div-error">
+				
+			</div>
+		<!--</div>--> 
 
-	<script>
+		<!--Modal para crear Tablero-->
+
+		<div class="modal fade" id="NuevoTablero" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Crear Tablero</h4>
+		      </div>
+		      <div class="modal-body">
+		          <!--inicio-->
+		          
+		          	Nombre &emsp; &emsp;
+		          	<input type="text" name="txt-usuario" id="txt-usuario" class=" form-control cajita" placeholder='"como Lugares que visitar"'>
+		     		<hr>
+		          	Secreto &emsp; &emsp;
+		          	<input type="checkbox" name="chk-secreto" id="chk-secreto" class="">
+
+          <!--Fin -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+        <button type="button" id="btn-nuevo-usuario" class="btn btn-danger">Crear</button>
+      </div>
+    </div>
+  </div>
+</div> <!--Fin de la modal para nuevos tableros-->
+
+<!--Modal para pines-->
+
+<div class="modal fade" id="NuevoPin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel" style="text-align: center;">Crear Pin</h4>
+		      </div>
+		      <div class="modal-body" style="height: 300px; width: 396px;">
+		          <!--Formulario para subir pin-->
+		          					
+		          	<table>
+		          		<tr>
+		          			<td><label style="padding-top: 45px;"><button class="cuadrado img-responsive" type="button" data-toggle="modal" data-target="#NuevoPin"><span class="glyphicon glyphicon-camera"></span><span><p><b>Arrastra o carga una foto</b></p></span></button></label></td>
+		          			<td>Agregar una descripcion <input type="text" class="form-control cajita" placeholder="descripcion" style="width: 190px; height: 60px;">
+		          				<br><br><br>
+		          				vincular con un sitio web
+		          				<input type="text" class="form-control cajita" placeholder="http://" style="width: 190px;">
+		          			</td>
+		          		</tr>
+		          	</table>
+		          	<!--Nombre &emsp; &emsp;
+		          	<input type="text" name="txt-usuario" id="txt-usuario" class=" form-control cajita" placeholder='"como Lugares que visitar"'>
+		     		<hr>
+		          	Secreto &emsp; &emsp;
+		          	<input type="checkbox" name="chk-secreto" id="chk-secreto" class="">-->
+		          
+
+          <!--Fin Formulario para subir pin-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">siguiente</button>
+      </div>
+    </div>
+  </div>
+</div> <!--Fin de la modal para nuevos pines-->
+
+
+	<!--<script>
 			var container = document.querySelector('.contenedor');
 			var msnry = new Masonry( container, {
 			  // options
 			  itemSelector: '.elemento'
 			});
-	</script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+	</script>-->
+	<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script type="text/javascript" src="js/controladorTableros.js"></script>
 </body>
 </html>
