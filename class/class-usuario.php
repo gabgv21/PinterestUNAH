@@ -148,7 +148,7 @@
 			if($cantidadRegistros==1){
 				echo "1";
 				$fila=$conexion->obtenerFila($resultado);
-				$_SESSION["nombre_usuario"] = $fila["nombre_usuario"];
+				$_SESSION["nombre_persona"] = $fila["nombre_persona"];
 			}else{
 				echo "0";
 			}
@@ -237,7 +237,7 @@
 				$conexion->antiInyeccion("3")
 		);
 			$resultado = $conexion->ejecutarconsulta($sql);
-			$_SESSION["nombre_usuario"] = $this->nombre_usuario;
+			$_SESSION["nombre_persona"] = $this->nombre_usuario;
 
 		}
 
