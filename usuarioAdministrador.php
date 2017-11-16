@@ -4,9 +4,6 @@
   {
   	header("location: paginaPrincipal.html");
   }
-  else if($_SESSION["ID_tipo_usuario"]!=1){
-  	header("location: pinterest.php");
-  }
 
 ?>
 
@@ -32,16 +29,16 @@
 		<input type="text" name="search" id=search placeholder="Buscar" class="input" w>
 	 
 	
-		<a href="pinterest.php"><button type="button" class="btn btn-default cambiacolor" >
+		<button type="button" class="btn btn-default cambiacolor" >
 			<i style="color:#969696" class="fa fa-navicon fa-2x "><br><p style="font-family: helvetica; font-weight:bold; " class="tamaño">Inicio</p></i>
-		</button></a>
+		</button>
 	
 	
-		<a href="perfilPinterest.php"><button type="button" class="btn btn-default cambiacolor" >
+		<button type="button" class="btn btn-default cambiacolor" >
 			<i style="color:#969696" class="fa fa-user fa-2x "><br><div style="height: 24px; width: 24px;"><div style="background-color: #EFEFEF; padding-bottom: 100%;"></div></div><p style="font-family: helvetica;font-weight: bold;" class="tamaño"><?php
              echo $_SESSION["nombre_persona"];
 			?></p></i>
-		</button></a>
+		</button>
 	
 	
 		<button type="button" class="btn btn-default cambiacolor" >
@@ -61,12 +58,12 @@
 				<p class="bienvenida">Bienvenido administrador</p>
 			</div>
 		<div class="div-secundario">
-			<button type="button" class="btn btn-danger btn-lg btn-block ">Genero<a href="Formularios/form-genero.php"></a></button>
-			<button type="button" class="btn btn-default btn-lg btn-block">Temas de Pines<a href="Formularios/form-temas-de-pines.php"></a></button>
-			<button type="button" class="btn btn-danger btn-lg btn-block">Tipo de notificaciones<a href="Formulario/form-tipo-notificacion.php"></a></button>
-			<button type="button" class="btn btn-default btn-lg btn-block">Tipos de empresa<a href="Formulario/tipos-empresas.php"></a></button>
-			<button type="button" class="btn btn-danger btn-lg btn-block">Tipos de tablero<a href="Formulario/form-tipo-tablero.php"></a></button>
-			<button type="button" class="btn btn-default btn-lg btn-block">Tipos de usuario<a href="Formulario/form-tipo-usuario.php"></a></button>
+			<a href="Formularios/form-genero.php"><button type="button" class="btn btn-danger btn-lg btn-block ">Genero</button></a>
+			<a href="Formularios/form-temas-de-pines.php"><button type="button" class="btn btn-default btn-lg btn-block">Temas de Pines</button></a>
+			<a href="Formularios/form-tipo-notificacion.php"><button type="button" class="btn btn-danger btn-lg btn-block">Tipo de notificaciones</button></a>
+			<a href="Formularios/form-tipos-empresas.php"><button type="button" class="btn btn-default btn-lg btn-block">Tipos de empresa</button></a>
+			<a href="Formularios/form-tipo-tablero.php"><button type="button" class="btn btn-danger btn-lg btn-block">Tipos de tablero</button></a>
+			<a href="Formularios/form-tipo-usuario.php"><button type="button" class="btn btn-default btn-lg btn-block">Tipos de usuario</button></a>
 		</div>
 		<div style="margin: 10px 0px 0px 45px">
 			<form class="form-inline" role="form">
